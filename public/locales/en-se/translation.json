@@ -1,0 +1,13 @@
+{
+  "menus": {
+    "application": {
+      "record": "Record",
+      "help": "Help"
+    }
+  },
+  "locales": {
+    "en-se": "English (International)",
+    "es-co": "español (Colombia)",
+    "pt-br": "Português (Brasil)"
+  }
+}

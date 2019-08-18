@@ -1,0 +1,9 @@
+
+@import "ember-bootstrap/bootstrap";
+
+.info-bar {
+  @extend .d-flex;
+  @extend .p-2;
+  @extend .bg-dark;
+  @extend .text-light;
+}

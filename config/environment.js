@@ -6,6 +6,16 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    appName: 'My RC+S',
+    i18nextOptions: {
+      lowerCaseLng: true,
+      fallbackLng: 'en-se',
+      whitelist: [
+        'en-se',
+        'es-co',
+        'pt-br'
+      ]
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
