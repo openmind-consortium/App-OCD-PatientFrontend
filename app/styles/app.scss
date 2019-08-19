@@ -1,9 +1,26 @@
 
+@import "variables";
 @import "ember-bootstrap/bootstrap";
+@import "components/menu";
+@import "components/battery";
+@import "components/rec";
+
+a {
+  color: gray;
+  &:hover {
+    color: limegreen;
+  }
+}
 
 .info-bar {
   @extend .d-flex;
   @extend .p-2;
-  @extend .bg-dark;
+  @extend .align-items-center;
+  background-color: #2d2d2d;
+}
+
+.bg-dark-mode {
   @extend .text-light;
+  background-color: $bg-dark-mode;
+  height: 100vh;
 }

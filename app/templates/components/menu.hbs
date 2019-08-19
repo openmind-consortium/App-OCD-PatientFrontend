@@ -1,0 +1,33 @@
+<div class="menu">
+  <div class="heading">
+    <h1>{{t "application.title"}}</h1>
+    <p>{{t "application.description"}}</p>
+  </div>
+
+
+  <BsNav @type="nav" as |nav|>
+    <nav.item @route="record" @class="nav-link ">
+      <span class="link-name">
+        {{t "menus.application.record"}}
+      </span>
+      <FaIcon @icon="angle-right" />
+    </nav.item>
+  </BsNav>
+
+  <BsNav @type="nav" as |nav|>
+    <nav.item @route="help" @class="nav-link ">
+      <span class="link-name">
+        {{t "menus.application.help"}}
+      </span>
+      <FaIcon @icon="angle-right" />
+    </nav.item>
+  </BsNav>
+  <div class="info-locale align-self-start p-2">
+    <LangSelect />
+  </div>
+{{!--
+  {{#link-to "help" class="badge"}}
+    {{t "menus.application.help"}}
+  {{/link-to}} --}}
+
+</div>

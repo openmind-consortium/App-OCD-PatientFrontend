@@ -1,52 +1,22 @@
-<div class="info-bar">
-  <div class="info-clock mr-auto">
-    <Clock />
-  </div>
+<body class="bg-dark-mode">
+  <div class="info-bar">
+    <div class="info-clock mr-auto">
+      <Clock />
+    </div>
 
-  <div class="info-locale mx-4">
-    <BsDropdown as |dd|>
-      <dd.button @type="secondary btn-sm">{{t (concat "locales." i18n.locale) }}<span class="caret"></span></dd.button>
-      <dd.menu as |ddm|>
-        <ddm.item>
-          <button class="btn btn-sm" {{action "changeLocale" "en-se"}}>
-            {{t "locales.en-se"}}
-          </button>
-        </ddm.item>
-        <ddm.item>
-          <button class="btn btn-sm" {{action "changeLocale" "es-co"}}>
-            {{t "locales.es-co"}}
-          </button>
-        </ddm.item>
-        <ddm.item>
-          <button class="btn btn-sm" {{action "changeLocale" "pt-br"}}>
-            {{t "locales.pt-br"}}
-          </button>
-        </ddm.item>
-      </dd.menu>
-    </BsDropdown>
-  </div>
-
-  <div class="info-battery">
-    100% Battery
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">
-    <h1>Title</h1>
-
-    <BsNav @type="pills" as |nav|>
-      <nav.item @route="record">
-        {{t "menus.application.record"}}
-      </nav.item>
-    </BsNav>
-
-  {{#link-to "help" class="badge"}}
-    {{t "menus.application.help"}}
-  {{/link-to}}
+    <div class="info-device d-flex">
+      <Rec @active=true />
+      <Battery @value=0.1 />
+    </div>
 
   </div>
-  <div class="col-md-9">
-    {{outlet}}
+
+  <div class="row">
+    <div class="col-md-3">
+      <Menu />
+    </div>
+    <div class="col-md-9">
+      {{outlet}}
+    </div>
   </div>
-</div>
+</body>

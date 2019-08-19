@@ -1,4 +1,8 @@
 {
+  "application": {
+    "title": "Syn/io",
+    "description": "A friendly RC+S controller"
+  },
   "menus": {
     "application": {
       "record": "Record",

@@ -1,0 +1,41 @@
+.menu {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .bg-dark;
+  @extend .justify-content-end;
+  width: 100%;
+  text-align: right;
+  height: 96vh;
+}
+
+.heading {
+  @extend .p-5;
+  h1 {
+    font-size: 6rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.nav {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .justify-content-end;
+}
+
+.nav-link {
+  @extend .d-flex;
+  @extend .justify-content-end;
+  @extend .align-items-center;
+  font-size: 3rem;
+}
+
+.link-name {
+  @extend .px-4;
+}
+
+.active {
+  background-color: $bg-dark-mode;
+  color: lime;
+}
