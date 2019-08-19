@@ -9,16 +9,16 @@
 
 @keyframes pulse {
   0% {
-    color: red;
-    border-color: red;
+    color: $red-max;
+    border-color: $red-max;
   }
   50% {
-    color: white;
-    border-color: white;
+    color: $red-min;
+    border-color: $red-min;
     }
   100% {
-    color: red;
-    border-color: red;
+    color: $red-max;
+    border-color: $red-max;
     }
 }
 

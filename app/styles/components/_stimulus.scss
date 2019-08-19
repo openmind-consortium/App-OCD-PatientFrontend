@@ -1,0 +1,15 @@
+.stimulus_on {
+  color: $success;
+  font-size: 0.8rem;
+}
+
+.stimulus_off {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.fa-bolt {
+  stroke-width: 30px;
+  stroke: $info-bar-dark;
+  color: $info-bar-dark;
+}

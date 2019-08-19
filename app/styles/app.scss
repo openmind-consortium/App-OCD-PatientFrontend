@@ -4,6 +4,7 @@
 @import "components/menu";
 @import "components/battery";
 @import "components/rec";
+@import "components/stimulus";
 
 a {
   color: gray;
@@ -16,7 +17,7 @@ a {
   @extend .d-flex;
   @extend .p-2;
   @extend .align-items-center;
-  background-color: #2d2d2d;
+  background-color: $info-bar-dark;
 }
 
 .bg-dark-mode {
