@@ -1,11 +1,11 @@
 .stimulus_on {
   color: $success;
-  font-size: 0.8rem;
+  font-size: $font-size-base * 0.8;
 }
 
 .stimulus_off {
   color: gray;
-  font-size: 0.8rem;
+  font-size: $font-size-base * 0.8;
 }
 
 .fa-bolt {

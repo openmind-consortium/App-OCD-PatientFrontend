@@ -22,6 +22,16 @@
       <FaIcon @icon="angle-right" />
     </nav.item>
   </BsNav>
+
+  <BsNav @type="nav" as |nav|>
+    <nav.item @route="settings" @class="nav-link ">
+      <span class="link-name">
+        {{t "menus.application.settings"}}
+      </span>
+      <FaIcon @icon="angle-right" />
+    </nav.item>
+  </BsNav>
+
   <div class="info-locale align-self-start p-2">
     <LangSelect />
   </div>

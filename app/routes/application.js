@@ -8,6 +8,10 @@ export default Route.extend(I18nMixin, {
     await this.i18n.i18next.use(LngDetector);
     await this.i18n.initLibraryAsync();
     // this.setHTMLLang();
+  },
+  actions: {
+    toggleMode() {
+      this.controller.toggleProperty('isDark');
+    }
   }
-
 });

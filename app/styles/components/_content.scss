@@ -1,0 +1,11 @@
+.bg-dark-mode {
+  .content {
+    @extend .text-light;
+  }
+}
+
+.bg-light-mode {
+  .content {
+    @extend .text-dark;
+  }
+}

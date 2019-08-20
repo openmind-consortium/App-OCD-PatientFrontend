@@ -1,0 +1,8 @@
+<Content @name={{t "menus.application.settings"}}>
+  <label>
+    {{input type="checkbox" checked=true change=(action (route-action "toggleMode"))}}
+    {{t "content.settings.dark-mode"}}
+  </label>
+</Content>
+
+{{outlet}}

@@ -1,20 +1,32 @@
 .menu {
   @extend .d-flex;
   @extend .flex-column;
-  @extend .bg-dark;
   @extend .justify-content-end;
   width: 100%;
   text-align: right;
   height: 96vh;
 }
 
+.bg-dark-mode {
+  .menu  {
+    @extend .bg-dark;
+  }
+}
+
+.bg-light-mode {
+  .menu {
+    @extend .bg-light;
+    @extend .text-dark;
+  }
+}
+
 .heading {
   @extend .p-5;
   h1 {
-    font-size: 6rem;
+    font-size: $font-size-base * 5;
   }
   p {
-    font-size: 1.5rem;
+    font-size: $font-size-base * 1.5;
   }
 }
 
@@ -28,14 +40,19 @@
   @extend .d-flex;
   @extend .justify-content-end;
   @extend .align-items-center;
-  font-size: 3rem;
+  font-size: $font-size-base * 2;
 }
 
 .link-name {
   @extend .px-4;
 }
 
-.active {
+.bg-dark-mode .active {
   background-color: $bg-dark-mode;
   color: lime;
+}
+
+.bg-light-mode .active {
+  background-color: $bg-light-mode;
+  color: blue;
 }

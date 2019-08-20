@@ -6,12 +6,18 @@
   "menus": {
     "application": {
       "record": "Record",
-      "help": "Help"
+      "help": "Help",
+      "settings": "Settings"
     }
   },
   "locales": {
     "en-se": "English (International)",
     "es-co": "español (Colombia)",
     "pt-br": "Português (Brasil)"
+  },
+  "content": {
+    "settings": {
+      "dark-mode": "Dark mode"
+    }
   }
 }

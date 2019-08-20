@@ -1,27 +1,49 @@
-
 @import "variables";
 @import "ember-bootstrap/bootstrap";
 @import "components/menu";
 @import "components/battery";
 @import "components/rec";
 @import "components/stimulus";
+@import "components/content";
+@import "components/settings";
 
-a {
+.bg-dark-mode a {
   color: gray;
   &:hover {
     color: limegreen;
   }
 }
 
-.info-bar {
-  @extend .d-flex;
-  @extend .p-2;
-  @extend .align-items-center;
-  background-color: $info-bar-dark;
+.bg-light-mode a {
+  color: gray;
+  &:hover {
+    color: navy;
+  }
+}
+
+
+.app {
+  height: 100vh;
+  .info-bar {
+    @extend .d-flex;
+    @extend .p-2;
+    @extend .align-items-center;
+  }
 }
 
 .bg-dark-mode {
   @extend .text-light;
   background-color: $bg-dark-mode;
-  height: 100vh;
+  .info-bar {
+    background-color: $info-bar-dark;
+  }
+}
+
+.bg-light-mode {
+  @extend .text-light;
+  background-color: $bg-light-mode;
+  .info-bar {
+    background-color: $info-bar-light;
+    @extend .text-dark;
+  }
 }

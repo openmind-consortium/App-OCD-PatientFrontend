@@ -2,7 +2,8 @@
   "menus": {
     "application": {
       "record": "Gravar",
-      "help": "Ajuda"
+      "help": "Ajuda",
+      "settings": "Configurações"
     }
   }
 }

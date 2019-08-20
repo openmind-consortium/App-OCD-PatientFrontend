@@ -1,23 +1,27 @@
-<body class="bg-dark-mode">
-  <div class="info-bar">
-    <div class="info-clock mr-auto">
-      <Clock />
+<body class="app">
+
+  <div class="{{if isDark "bg-light-mode" "bg-dark-mode"}}" >
+
+    <div class="info-bar">
+      <div class="info-clock mr-auto">
+        <Clock />
+      </div>
+
+      <div class="info-device d-flex">
+        <Stimulus @status="on" @volt={{4}}/>
+        <Rec @active={{true}} />
+        <Battery @value={{0.1}} />
+      </div>
+
     </div>
 
-    <div class="info-device d-flex">
-      <Stimulus @status="off" @volt={{4}}/>
-      <Rec @active={{false}} />
-      <Battery @value={{0.1}} />
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-3">
-      <Menu />
-    </div>
-    <div class="col-md-9">
-      {{outlet}}
+    <div class="row">
+      <div class="col-md-3">
+        <Menu />
+      </div>
+      <div class="col-md-9">
+        {{outlet}}
+      </div>
     </div>
   </div>
 </body>
