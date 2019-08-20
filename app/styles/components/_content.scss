@@ -9,3 +9,11 @@
     @extend .text-dark;
   }
 }
+
+.title {
+  font-size: $font-size-base * 4;
+}
+
+.item-title {
+  @extend .pt-4;
+}

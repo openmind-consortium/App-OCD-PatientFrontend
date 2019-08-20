@@ -1,8 +1,21 @@
 <Content @name={{t "menus.application.settings"}}>
-  <label>
-    {{input type="checkbox" checked=true change=(action (route-action "toggleMode"))}}
-    {{t "content.settings.dark-mode"}}
-  </label>
+
+
+  <hr />
+  <h1 class="item-title">{{t "content.settings.language"}}</h1>
+  <div>
+    <div class="info-locale align-self-start p-2">
+      <LangSelect />
+    </div>
+  </div>
+  <h1 class="item-title">{{t "content.settings.set-theme"}}</h1>
+  <div>
+    <p>{{settings.checked}}</p>
+    <label>
+      {{input type="checkbox" checked=true change=(action (route-action "toggleMode"))}}
+      {{t "content.settings.dark-mode"}}
+    </label>
+  </div>
 </Content>
 
 {{outlet}}

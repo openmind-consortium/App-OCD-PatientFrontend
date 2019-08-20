@@ -5,5 +5,17 @@
       "help": "Ayuda",
       "settings": "Configuraciones"
     }
+  },
+  "content": {
+    "settings": {
+      "dark-mode": "Dark mode",
+      "set-theme": "Establecer tema",
+      "language": "Cambiar idioma"
+    },
+    "record": {
+      "on_demand_recording": "On demand recording",
+      "start_recording": "Comenzar la grabacion",
+      "stop_recording": "Detener la grabación"
+    }
   }
 }

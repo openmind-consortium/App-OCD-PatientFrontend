@@ -1,5 +1,5 @@
 <BsDropdown as |dd|>
-  <dd.button @type="link btn-sm">{{t (concat "locales." i18n.locale) }}<span class="caret"></span></dd.button>
+  <dd.button @type="secondary">{{t (concat "locales." i18n.locale) }}<span class="caret"></span></dd.button>
   <dd.menu as |ddm|>
     <ddm.item>
       <button class="btn btn-sm" {{action "changeLocale" "en-se"}}>

@@ -1,3 +1,4 @@
+// Info Bar
 .pulse {
   color: red;
   border: solid 1px;
@@ -21,8 +22,32 @@
     border-color: $red-max;
     }
 }
-
 .idle {
   color: gray;
   border: solid 1px gray;
+}
+
+// Route Content
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @extend .p-3;
+  border-radius: 2rem;
+  p {
+    @extend .pt-2;
+    margin-bottom: auto;
+  }
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @extend .pt-5;
+}
+
+.timer {
+  font-size: $font-size-base * 5;
 }

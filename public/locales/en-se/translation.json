@@ -17,7 +17,15 @@
   },
   "content": {
     "settings": {
-      "dark-mode": "Dark mode"
+      "dark-mode": "Dark mode",
+      "set-theme": "Set theme",
+      "language": "Change language"
+    },
+    "record": {
+      "on_demand_recording": "On demand recording",
+      "start_recording": "Start recording",
+      "stop_recording": "Stop recording",
+      "time_since_start": "Time since start"
     }
   }
 }

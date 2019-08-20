@@ -15,6 +15,8 @@ export default Component.extend({
   }),
   time: computed('formatter', 'clock.second', function () {
     return this.formatter.format(new Date());
+  }),
+  tick: computed('clock.second', function () {
+    return this.get('clock.second')
   })
-  
 });
