@@ -2,19 +2,18 @@
   <hr>
   <h1 class="item-title">{{t "content.record.on_demand_recording"}}</h1>
   <div class="button-group">
-    <BsButton @type="danger button" @onClick={{action (route-action "startTimer")}}>
+    <BsButton @type="danger button">
       <span><FaIcon @icon="dot-circle" @size="4x"/></span>
       <p>{{t "content.record.start_recording"}}</p>
     </BsButton>
 
-    <BsButton @type="primary button" @onClick={{action (route-action "stopTimer")}}>
+    <BsButton @type="primary button">
       <span><FaIcon @icon="stop" @size="4x"/></span>
       <p>{{t "content.record.stop_recording"}}</p>
     </BsButton>
 
     <div class="status w-50">
       <h1>{{t "content.record.time_since_start"}}</h1>
-      <Clock @showTimer=true />
     </div>
   </div>
 </Content>

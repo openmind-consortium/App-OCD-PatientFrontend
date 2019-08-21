@@ -13,14 +13,6 @@ export default Route.extend(I18nMixin, {
     toggleMode() {
       this.controller.toggleProperty('settings.isLight');
       this.controller.toggleProperty('settings.checked');
-    },
-    startTimer() {
-      this.controller.set('timerStart', new Date())
-      console.log(this.controller.get('timerStart'))
-    },
-    stopTimer() {
-      this.controller.set('timerStart', null)
-      console.log(this.controller.get('timerStart'))
     }
   }
 });
