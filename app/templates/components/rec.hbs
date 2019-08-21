@@ -1,4 +1,8 @@
 <span class="badge mr-3 {{status}}">
   <FaIcon @icon="dot-circle" />
-  REC
+  {{#if recording }}
+    {{text}}
+  {{else}}
+    Not {{text}}
+  {{/if}}
 </span>

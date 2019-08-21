@@ -37,5 +37,8 @@
     "good_evening": "Good evening",
     "good_night": "Good night",
     "hello": "Hello"
+  },
+  "status": {
+    "here_is_the_current_status": "Here is the current status of your RC+S device"
   }
 }

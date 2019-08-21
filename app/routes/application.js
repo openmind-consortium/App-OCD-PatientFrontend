@@ -11,10 +11,10 @@ export default Route.extend(I18nMixin, {
 
   model() {
     return this.store.createRecord('device', {
-      patient_name: 'Nicole', 
+      patient_name: 'Nicole',
       battery: 0.63482,
       recording: false,
-      stimulation_voltage: 0.8
+      stimulation_voltage: 0
     });
   },
 
