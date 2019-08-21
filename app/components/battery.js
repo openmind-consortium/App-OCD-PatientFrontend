@@ -3,7 +3,7 @@ import { computed } from '@ember/object';
 
 export default Component.extend({
   percentage: computed('value', function() {
-    return parseFloat(this.value * 100) + '%'
+    return Math.round(parseFloat(this.value * 100)) + '%'
   }),
   level: computed('value', function() {
     let fa;

@@ -14,5 +14,5 @@ export default Component.extend({
   }),
   time: computed('formatter', 'clock.second', 'showClock', function () {
     return this.formatter.format(new Date());
-  })
+  }),
 });

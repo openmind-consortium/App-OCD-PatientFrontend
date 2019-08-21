@@ -1,11 +1,11 @@
-.stimulus_on {
-  color: $success;
-  font-size: $font-size-base * 0.8;
-}
-
-.stimulus_off {
+.stimulus {
+  @extend .badge;
   color: gray;
   font-size: $font-size-base * 0.8;
+  &.active {
+    color: $success;
+    font-size: $font-size-base * 0.8;
+  }
 }
 
 .fa-bolt {

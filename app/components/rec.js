@@ -2,9 +2,9 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 
 export default Component.extend({
-  status: computed('active', function() {
+  status: computed('recording', function() {
     let statusClass;
-    if (this.active){
+    if (this.recording){
       statusClass = 'pulse'
     }
     else {

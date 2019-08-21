@@ -16,6 +16,17 @@
       "on_demand_recording": "On demand recording",
       "start_recording": "Comenzar la grabacion",
       "stop_recording": "Detener la grabación"
+    },
+    "states": {
+      "stimulation-on": "Estímulo activado",
+      "stimulation-off": "Estímulo desactivado"
+    },
+    "salutation": {
+      "good_morning": "Buenos días",
+      "good_afternoon": "Buenas tardes",
+      "good_evening": "Buena noche",
+      "good_night": "Buena noche",
+      "hello": "Hola"
     }
   }
 }

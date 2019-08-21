@@ -1,6 +1,6 @@
 {
   "application": {
-    "title": "Syn/io",
+    "title": "MyRC+S",
     "description": "A friendly RC+S controller"
   },
   "menus": {
@@ -24,8 +24,18 @@
     "record": {
       "on_demand_recording": "On demand recording",
       "start_recording": "Start recording",
-      "stop_recording": "Stop recording",
-      "time_since_start": "Time since start"
+      "stop_recording": "Stop recording"
     }
+  },
+  "states": {
+    "stimulation-on": "Stimulation ON",
+    "stimulation-off": "Stimulation OFF"
+  },
+  "greetings": {
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
+    "good_night": "Good night",
+    "hello": "Hello"
   }
 }

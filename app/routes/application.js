@@ -7,12 +7,25 @@ export default Route.extend(I18nMixin, {
     await this.i18n.i18next.use(LngDetector);
     await this.i18n.initLibraryAsync();
     // this.setHTMLLang();
-
   },
+
+  model() {
+    return this.store.createRecord('device', {
+      patient_name: 'Nicole', 
+      battery: 0.63482,
+      recording: false,
+      stimulation_voltage: 0.8
+    });
+  },
+
   actions: {
     toggleMode() {
       this.controller.toggleProperty('settings.isLight');
       this.controller.toggleProperty('settings.checked');
+    },
+    toggleRec() {
+      this.currentModel.toggleProperty('recording');
+      this.currentModel.save();
     }
   }
 });

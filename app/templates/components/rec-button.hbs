@@ -1,16 +1,16 @@
 <div class="d-flex flex-column align-items-center justify-content-center">
-<BsButton @type="dark button" @onClick={{action "toggleRec"}} >
-  <span>
-    <FaIcon
-      @icon={{if recording "square" "circle"}}
-      @size={{if recording "3x" "4x"}}/>
-  </span>
-</BsButton>
-<p class="pt-1">
-  {{#if recording }}
-    {{t "content.record.stop_recording"}}
-  {{else}}
-    {{t "content.record.start_recording"}}
-  {{/if}}
-</p>
+  <BsButton @type="dark button" @onClick={{action "toggleRec"}} >
+    <span>
+      <FaIcon
+        @icon={{if recording "square" "circle"}}
+        @size={{if recording "3x" "4x"}}/>
+    </span>
+  </BsButton>
+  <p class="pt-1">
+    {{#if recording }}
+      {{t "content.record.stop_recording"}}
+    {{else}}
+      {{t "content.record.start_recording"}}
+    {{/if}}
+  </p>
 </div>

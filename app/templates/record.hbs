@@ -1,12 +1,10 @@
-<Content @name={{t "menus.application.record"}}>
+<Content @name={{t "menus.application.record"}} >
   <hr>
-  <h1 class="item-title">{{t "content.record.on_demand_recording"}}</h1>
-  <div class="button-group">
-    <RecButton />
-    {{!-- <BsButton @type="secondary button">
-      <span><FaIcon @icon="stop" @size="4x"/></span>
-      <p>{{t "content.record.stop_recording"}}</p>
-    </BsButton> --}}
+  <div class="content-item">
+    <h2 class="item-title">{{t "content.record.on_demand_recording"}}</h2>
+    <div class="button-group">
+      <RecButton @recording={{model.recording}} @toggleRec={{action (route-action "toggleRec")}}/>
+    </div>
   </div>
 </Content>
 

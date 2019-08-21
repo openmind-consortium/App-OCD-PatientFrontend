@@ -4,13 +4,13 @@
 
     <div class="info-bar">
       <div class="info-clock mr-auto">
-        <Clock @showClock=true />
+        <Clock @showClock={{true}} />
       </div>
 
       <div class="info-device d-flex">
-        <Stimulus @status="on" @volt={{4}}/>
-        <Rec @active={{true}} />
-        <Battery @value={{0.1}} />
+        <Stimulus @voltage={{model.stimulation_voltage}}/>
+        <Rec @recording={{model.recording}} />
+        <Battery @value={{model.battery}} />
       </div>
 
     </div>

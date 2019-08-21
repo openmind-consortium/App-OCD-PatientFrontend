@@ -2,10 +2,11 @@
 @import "ember-bootstrap/bootstrap";
 @import "components/menu";
 @import "components/battery";
-@import "components/rec";
+@import "components/record";
 @import "components/stimulus";
 @import "components/content";
 @import "components/settings";
+@import "components/index";
 
 .bg-dark-mode a {
   color: gray;
