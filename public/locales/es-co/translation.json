@@ -13,16 +13,17 @@
       "language": "Cambiar idioma"
     },
     "record": {
-      "on_demand_recording": "On demand recording",
+      "on_demand_recording": "Grabacion en demanda",
       "start_recording": "Comenzar la grabacion",
-      "stop_recording": "Detener la grabación"
+      "stop_recording": "Detener la grabación",
+      "not": "No está"
     }
   },
   "states": {
     "stimulation-on": "Estímulo activado",
     "stimulation-off": "Estímulo desactivado"
   },
-  "salutation": {
+  "greetings": {
     "good_morning": "Buenos días",
     "good_afternoon": "Buenas tardes",
     "good_evening": "Buena noche",

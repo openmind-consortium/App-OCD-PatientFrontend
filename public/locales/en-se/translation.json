@@ -24,7 +24,8 @@
     "record": {
       "on_demand_recording": "On demand recording",
       "start_recording": "Start recording",
-      "stop_recording": "Stop recording"
+      "stop_recording": "Stop recording",
+      "not": "Not"
     }
   },
   "states": {

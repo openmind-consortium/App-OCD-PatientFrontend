@@ -15,7 +15,8 @@
     "record": {
       "on_demand_recording": "Gravação em demanda",
       "start_recording": "Iniciar a gravação",
-      "stop_recording": "Interromper a gravação"
+      "stop_recording": "Interromper a gravação",
+      "not": "Não está"
     }
   },
   "states": {

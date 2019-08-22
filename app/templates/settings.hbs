@@ -2,14 +2,13 @@
   <hr>
   <h1 class="item-title">{{t "content.settings.language"}}</h1>
   <div>
-    <div class="info-locale align-self-start p-2">
+    <div class="info-locale align-self-start p-3">
       <LangSelect />
     </div>
   </div>
   <h1 class="item-title">{{t "content.settings.set-theme"}}</h1>
   <div>
-    <p>{{settings.checked}}</p>
-    <label>
+    <label class="p-4">
       {{input type="checkbox" checked=true change=(action (route-action "toggleMode"))}}
       {{t "content.settings.dark-mode"}}
     </label>
