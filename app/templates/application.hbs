@@ -1,6 +1,6 @@
 <body class="app">
 
-  <div class={{if settings.isLight "bg-light-mode" "bg-dark-mode"}} >
+  <div class={{if settings.isDark "bg-dark-mode" "bg-light-mode"}} >
 
     <div class="info-bar">
       <div class="info-clock mr-auto">
@@ -16,10 +16,10 @@
     </div>
 
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-auto">
         <Menu />
       </div>
-      <div class="col-md-9">
+      <div class="col">
         {{outlet}}
       </div>
     </div>
