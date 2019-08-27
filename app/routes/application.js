@@ -20,8 +20,7 @@ export default Route.extend(I18nMixin, {
 
   actions: {
     toggleMode() {
-      this.controller.toggleProperty('settings.isLight');
-      this.controller.toggleProperty('settings.checked');
+      this.controller.toggleProperty('settings.isDark');
     },
     toggleRec() {
       this.currentModel.toggleProperty('recording');
