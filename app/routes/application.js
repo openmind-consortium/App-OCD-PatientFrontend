@@ -11,7 +11,6 @@ export default Route.extend(I18nMixin, {
 
   model() {
     return this.store.createRecord('device', {
-      patient_name: 'Nicole',
       battery: 0.63482,
       recording: false,
       stimulation_voltage: 0
@@ -19,6 +18,9 @@ export default Route.extend(I18nMixin, {
   },
 
   actions: {
+    updateName(val) {
+      this.controller.set('settings.userName', val)
+    },
     toggleMode() {
       this.controller.toggleProperty('settings.isDark');
     },

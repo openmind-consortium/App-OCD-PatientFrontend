@@ -10,7 +10,8 @@
     "settings": {
       "dark-mode": "Dark mode",
       "set-theme": "Escolher tema",
-      "language": "Mudar idioma"
+      "language": "Mudar idioma",
+      "set-user": "Escolha o nome de usuário"
     },
     "record": {
       "on_demand_recording": "Gravação em demanda",

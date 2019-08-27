@@ -5,7 +5,8 @@ const Storage = StorageObject.extend();
 Storage.reopenClass({
   initialState() {
     return {
-      isDark: false
+      isDark: true,
+      userName: 'Fer'
     };
   }
 });
