@@ -1,10 +1,10 @@
 <Content @name={{t "menus.application.settings"}}>
   <hr>
 
-  <h1 class="item-title">{{t "content.settings.set-name"}}</h1>
+  <h1 class="item-title">{{t "content.settings.set-user"}}</h1>
   <div>
-    <div>
-      <Input @id="change-name-input" @type="tex" @name="changeName" @value={{this.model.userName}} @key-up={{route-action "updateName"}} />
+    <div class="info-locale align-self-start p-3">
+      {{input class="input-group-text" type="text" value=model.userName keyup=(action (route-action "updateName"))}}
     </div>
   </div>
 
@@ -18,7 +18,7 @@
   <h1 class="item-title">{{t "content.settings.set-theme"}}</h1>
   <div>
     <label class="p-4">
-      <Input @id="light-mode-checkbox" @type="checkbox" @name="lightMode" @checked={{this.model.isDark}} @keyPress={{route-action "toggleLightMode"}} />
+      {{input type="checkbox" checked=model.isDark change=(action (route-action "toggleMode"))}}
       {{t "content.settings.dark-mode"}}
     </label>
   </div>

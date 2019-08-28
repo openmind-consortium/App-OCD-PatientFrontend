@@ -11,7 +11,7 @@
       "dark-mode": "Dark mode",
       "set-theme": "Escolher tema",
       "language": "Mudar idioma",
-      "set-name": "Set user name (Português)"
+      "set-user": "Escolha o nome de usuário"
     },
     "record": {
       "on_demand_recording": "Gravação em demanda",

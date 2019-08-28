@@ -5,12 +5,10 @@ const Storage = StorageObject.extend();
 Storage.reopenClass({
   initialState() {
     return {
-      userName: 'Nicole',
-      checked: true,
-      isDark: false
+      isDark: true,
+      userName: 'Fer'
     };
   }
 });
-
 
 export default Storage;

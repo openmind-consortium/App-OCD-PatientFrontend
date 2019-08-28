@@ -1,19 +1,19 @@
 import Route from '@ember/routing/route';
+import { storageFor } from 'ember-local-storage';
 
 export default Route.extend({
-  model() {
-    let { settings } = this.controllerFor('application')
+  settings: storageFor('settings'),
 
-    return settings
+  model() {
+    return this.settings.content;
   },
 
   actions: {
     updateName(val) {
-      console.log(val)
-      this.controllerFor('application').set('settings.userName', val)
+      this.settings.set('userName', val)
     },
-    toggleLightMode() {
-      this.controllerFor('application').toggleProperty('settings.isDark')
+    toggleMode() {
+      this.settings.toggleProperty('isDark');
     }
   }
 });
