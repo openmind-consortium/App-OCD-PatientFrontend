@@ -1,8 +1,11 @@
 import Route from '@ember/routing/route';
+import { storageFor } from 'ember-local-storage';
 
 export default Route.extend({
-  model() {
-    let { settings } = this.controllerFor('application')
-    return settings.content
+  settings: storageFor('settings'),
+
+  setupController(controller) {
+    this._super(...arguments);
+    controller.set('settings', this.settings.content);
   }
 });
