@@ -6,17 +6,16 @@ import { storageFor } from 'ember-local-storage';
 export default Route.extend(I18nMixin, {
   settings: storageFor('settings'),
 
-  async beforeModel() {
-    await this.i18n.i18next.use(LngDetector);
-    await this.i18n.initLibraryAsync();
-    // this.setHTMLLang();
+  beforeModel() {
+    this.i18n.i18next.use(LngDetector);
+    return this.i18n.initLibraryAsync();
   },
 
   model() {
     return this.store.createRecord('device', {
-      battery: 0.63482,
+      battery: 0.1,
       recording: false,
-      stimulation_voltage: 0
+      stimulation_voltage: 0.2
     });
   },
 

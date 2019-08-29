@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | battery', function(hooks) {
@@ -9,18 +9,9 @@ module('Integration | Component | battery', function(hooks) {
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<Battery />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Battery>
-        template block text
-      </Battery>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    this.set('value', 0)
+    await render(hbs`<Battery @value={{value}}/>`);
+    assert.equal(this.element.textContent.trim(), '0%', 'text is "0%" when value is 0.');
+    assert.ok(find('.fa-battery-empty'), '".fa-battery-empty" when value is 0.');
   });
 });

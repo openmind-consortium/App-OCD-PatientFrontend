@@ -10,7 +10,6 @@ Router.map(function() {
   this.route('record');
   this.route('help');
   this.route('settings');
-  this.route('home');
 });
 
 export default Router;
