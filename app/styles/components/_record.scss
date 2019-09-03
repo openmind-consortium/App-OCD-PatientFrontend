@@ -6,24 +6,25 @@
   animation-name: pulse;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  background-color: white;
 }
 
 @keyframes pulse {
   0% {
-    color: $red-max;
-    border-color: $red-max;
+    color: $red;
+    border-color: $red;
   }
   50% {
-    color: $red-min;
-    border-color: $red-min;
+    color: black;
+    border-color: black;
     }
   100% {
-    color: $red-max;
-    border-color: $red-max;
+    color: $red;
+    border-color: $red;
     }
 }
 .idle {
-  color: gray;
+  @extend .text-light;
   border: solid 1px gray;
 }
 
@@ -53,13 +54,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @extend .p-1;
+  @extend .bg-white;
+  color: $red;
+  font-weight: bold;
+  height: 10rem;
+  width: 10rem;
   @extend .rounded-circle;
-  @extend .border;
-  color: red;
-  height: 5rem;
-  width: 5rem;
+  &:hover {
+    color: black;
+  }
+  span {
+    padding-top: 1rem;
+  }
 }
+
 
 .button-group {
   display: flex;

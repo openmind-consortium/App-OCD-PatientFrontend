@@ -1,10 +1,13 @@
 .stimulus {
   @extend .badge;
+  border: solid 1px gray;
+  background-color: none;
   color: gray;
   font-size: $font-size-base * 0.8;
   &.active {
     color: $success;
     font-size: $font-size-base * 0.8;
+    border: black;
   }
 }
 
