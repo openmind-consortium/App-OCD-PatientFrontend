@@ -14,10 +14,15 @@
       "set-user": "Escoge nombre de usuario"
     },
     "record": {
-      "on_demand_recording": "Grabacion en demanda",
-      "start_recording": "Comenzar la grabacion",
-      "stop_recording": "Detener la grabación",
+      "on-demand-recording": "Grabacion en demanda",
+      "start-recording": "Comenzar la grabacion",
+      "stop-recording": "Detener la grabación",
       "not": "No está"
+    },
+    "help": {
+      "if-medical-emergency": "If you are having a medical emergency, please call 911",
+      "if-technical-difficulties": "If you are having technical difficulties and need assistance, please call XXX-XXX-XXXX or email xxxxxx@gmail.com",
+      "recoding": "Select this button when you would like to start recording your neural activity from your RC+S implanted device. Recording will not affect your stimulation therapy in any way. Whenever you’re ready, you can choose to stop recording by pressing the “stop recording” button on the screen."
     }
   },
   "states": {
@@ -25,13 +30,13 @@
     "stimulation-off": "Estímulo desactivado"
   },
   "greetings": {
-    "good_morning": "Buenos días",
-    "good_afternoon": "Buenas tardes",
-    "good_evening": "Buena noche",
-    "good_night": "Buena noche",
+    "good-morning": "Buenos días",
+    "good-afternoon": "Buenas tardes",
+    "good-evening": "Buena noche",
+    "good-night": "Buena noche",
     "hello": "Hola"
   },
   "status": {
-    "here_is_the_current_status": "Aquí está el estado actual de su dispositivo RC + S"
+    "here-is-the-current-status": "Aquí está el estado actual de su dispositivo RC + S"
   }
 }

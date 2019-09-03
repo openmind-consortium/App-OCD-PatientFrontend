@@ -15,7 +15,7 @@ export default Route.extend(I18nMixin, {
     return this.store.createRecord('device', {
       battery: 0.7,
       recording: false,
-      stimulation_voltage: 0.2
+      stimulation_voltage: 0.1
     });
   },
 

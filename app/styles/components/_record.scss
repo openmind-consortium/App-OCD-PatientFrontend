@@ -1,31 +1,56 @@
 // Info Bar
 .pulse {
-  color: red;
-  border: solid 1px;
-  border-color: red;
-  animation-name: pulse;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  background-color: white;
 }
 
-@keyframes pulse {
+@keyframes pulse-dark {
+  0% {
+    color: orange;
+  }
+  50% {
+    color: white;
+    }
+  100% {
+    color: orange;
+    }
+}
+
+@keyframes pulse-light {
   0% {
     color: $red;
-    border-color: $red;
   }
   50% {
     color: black;
-    border-color: black;
     }
   100% {
     color: $red;
-    border-color: $red;
     }
 }
-.idle {
-  @extend .text-light;
-  border: solid 1px gray;
+
+
+.bg-dark-mode {
+  .idle {
+    @extend .text-light;
+    background-color: $bg-dark-mode ;
+  }
+  .pulse {
+    background-color: $bg-dark-mode;
+    color: red;
+    animation-name: pulse-dark;
+  }
+}
+
+.bg-light-mode {
+  .idle {
+    @extend .text-dark;
+    background-color: $bg-light-mode ;
+  }
+  .pulse {
+    background-color: $bg-light-mode;
+    color: red;
+    animation-name: pulse-light;
+  }
 }
 
 // Route Content
@@ -59,7 +84,7 @@
   font-weight: bold;
   height: 10rem;
   width: 10rem;
-  @extend .rounded-circle;
+  border-radius: 25%;
   &:hover {
     color: black;
   }

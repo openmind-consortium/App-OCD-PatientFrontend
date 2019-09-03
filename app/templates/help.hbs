@@ -1,3 +1,26 @@
-<Content @name={{t "menus.application.help"}} />
+<Content @name={{t "menus.application.help"}}>
 
+  <div class="d-flex pt-5">
+    <p class="h3 col-md-4">{{t "content.help.emergency"}}</p>
+    <div class="col-md-8">
+      <p class="h5">{{t "content.help.if-medical-emergency"}}</p>
+      <p class="h5">{{t "content.help.if-technical-difficulties"}}</p>
+    </div>
+  </div>
+
+  <div class="d-flex pt-5">
+    <p class="h3 col-md-4">{{t "content.help.usage"}}</p>
+    <div class="col-md-8 d-flex">
+      <div class="col-md-6">
+        <p class="h5">{{t "content.record.on-demand-recording"}}</p>
+        <p class="h6 pt-4">{{t "content.help.recording.text"}}</p>
+      </div>
+      <div class="col-md-6">
+        <p class="h5">{{t "menus.application.settings"}}</p>
+        <p class="h6 pt-4">{{t "content.help.settings.text"}}</p>
+      </div>
+    </div>
+  </div>
+
+</Content>
 {{outlet}}

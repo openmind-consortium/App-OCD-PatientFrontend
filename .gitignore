@@ -25,3 +25,5 @@
 /package.json.ember-try
 
 electron-out/
+
+.npmrc

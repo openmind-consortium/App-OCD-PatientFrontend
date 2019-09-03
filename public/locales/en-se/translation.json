@@ -23,10 +23,22 @@
       "set-user": "Set user name"
     },
     "record": {
-      "on_demand_recording": "On demand recording",
-      "start_recording": "Start recording",
-      "stop_recording": "Stop recording",
+      "on-demand-recording": "On demand recording",
+      "start-recording": "Start recording",
+      "stop-recording": "Stop recording",
       "not": "Not"
+    },
+    "help": {
+      "usage": "Usage",
+      "emergency": "Emergency",
+      "if-medical-emergency": "If you are having a medical emergency, please call 911.",
+      "if-technical-difficulties": "If you are having technical difficulties and need assistance, please call XXX-XXX-XXXX or email xxxxxx@gmail.com",
+      "recording": {
+        "text": "Select this button when you would like to start recording your neural activity from your RC+S implanted device. Recording will not affect your stimulation therapy in any way. Whenever you’re ready, you can choose to stop recording by pressing the “stop recording” button on the screen."
+      },
+      "settings": {
+        "text": "You can set your preferred language, username and switch between light and dark mode."
+      }
     }
   },
   "states": {
@@ -34,13 +46,13 @@
     "stimulation-off": "Stimulation OFF"
   },
   "greetings": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
-    "good_night": "Good night",
+    "good-morning": "Good morning",
+    "good-afternoon": "Good afternoon",
+    "good-evening": "Good evening",
+    "good-night": "Good night",
     "hello": "Hello"
   },
   "status": {
-    "here_is_the_current_status": "Here is the current status of your RC+S device"
+    "here-is-the-current-status": "Here is the current status of your RC+S device"
   }
 }
