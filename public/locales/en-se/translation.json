@@ -29,8 +29,9 @@
       "not": "Not"
     },
     "help": {
-      "usage": "Usage",
+      "usage": "How to use MyRC+S",
       "emergency": "Emergency",
+      "call": "CALL",
       "if-medical-emergency": "If you are having a medical emergency, please call 911.",
       "if-technical-difficulties": "If you are having technical difficulties and need assistance, please call XXX-XXX-XXXX or email xxxxxx@gmail.com",
       "recording": {

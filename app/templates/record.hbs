@@ -5,6 +5,9 @@
     <div class="button-group">
       <RecButton @recording={{model.recording}} @toggleRec={{action (route-action "toggleRec")}}/>
     </div>
+    <h1 class="status">
+      <Rec @recording={{model.recording}} @text="Recording"/>
+    </h1>
   </div>
 </Content>
 
