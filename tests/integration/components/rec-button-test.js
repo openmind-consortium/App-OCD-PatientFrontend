@@ -14,13 +14,5 @@ module('Integration | Component | rec-button', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), '');
 
-    // Template block usage:
-    await render(hbs`
-      <RecButton>
-        template block text
-      </RecButton>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

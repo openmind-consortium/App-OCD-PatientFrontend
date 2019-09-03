@@ -1,23 +1,25 @@
 <Content @name={{t "menus.application.settings"}}>
   <hr>
 
-  <h1 class="item-title">{{t "content.settings.set-user"}}</h1>
   <div>
     <div class="info-locale align-self-start p-3">
-      {{input class="input-group-text" type="text" value=model.userName keyup=(action (route-action "updateName"))}}
+      <label>
+        <p class="h4">{{t "content.settings.set-user"}}</p>
+        {{input class="input-group-text" type="text" value=model.userName keyup=(action (route-action "updateName"))}}
+      </label>
     </div>
   </div>
 
-  <h1 class="item-title">{{t "content.settings.language"}}</h1>
   <div>
     <div class="info-locale align-self-start p-3">
+      <p class="h4">{{t "content.settings.language"}}</p>
       <LangSelect />
     </div>
   </div>
 
-  <h1 class="item-title">{{t "content.settings.set-theme"}}</h1>
   <div>
     <label class="p-4">
+      <p class="h4">{{t "content.settings.set-theme"}}</p>
       {{input type="checkbox" checked=model.isDark change=(action (route-action "toggleMode"))}}
       {{t "content.settings.dark-mode"}}
     </label>

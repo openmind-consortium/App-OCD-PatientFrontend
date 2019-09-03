@@ -11,16 +11,7 @@ module('Integration | Component | date', function(hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     await render(hbs`<Date />`);
+    assert.equal(this.element.textContent.trim(), '', `should today's render date`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Date>
-        template block text
-      </Date>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

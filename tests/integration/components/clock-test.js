@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | clock', function(hooks) {
@@ -12,15 +12,7 @@ module('Integration | Component | clock', function(hooks) {
 
     await render(hbs`<Clock />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.ok(find('.clock'), 'should render clock with .clock class');
 
-    // Template block usage:
-    await render(hbs`
-      <Clock>
-        template block text
-      </Clock>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

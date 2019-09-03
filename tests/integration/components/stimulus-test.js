@@ -13,14 +13,5 @@ module('Integration | Component | stimulus', function(hooks) {
     await render(hbs`<Stimulus />`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Stimulus>
-        template block text
-      </Stimulus>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

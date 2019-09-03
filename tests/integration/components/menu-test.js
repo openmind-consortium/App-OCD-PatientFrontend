@@ -12,15 +12,7 @@ module('Integration | Component | menu', function(hooks) {
 
     await render(hbs`<Menu />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '', 'should render menu');
 
-    // Template block usage:
-    await render(hbs`
-      <Menu>
-        template block text
-      </Menu>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

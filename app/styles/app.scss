@@ -9,7 +9,7 @@
 @import "components/index";
 
 .bg-dark-mode a {
-  color: gray;
+  @extend .text-light;
   &:hover {
     color: limegreen;
   }

@@ -1,10 +1,11 @@
 .stimulus {
   @extend .badge;
-  color: gray;
+  border: solid 1px gray;
+  background-color: none;
   font-size: $font-size-base * 0.8;
   &.active {
-    color: $success;
     font-size: $font-size-base * 0.8;
+    border: black;
   }
 }
 
@@ -12,4 +13,13 @@
   stroke-width: 30px;
   stroke: $info-bar-dark;
   color: $info-bar-dark;
+}
+
+.bg-dark-mode {
+  .stimulus {
+    @extend .text-light;
+    &.active {
+      color: $success !important;
+    }
+  }
 }

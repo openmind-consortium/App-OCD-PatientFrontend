@@ -1,8 +1,5 @@
 <span class="mr-3 stimulus {{if voltage "active"}}">
-  <span class="fa-layers mr-1">
-    <FaIcon @icon="brain" />
-    <FaIcon @icon="bolt" class="fa-inverse" @transform="shrink-4 right-1" />
-  </span>
+  <FaIcon @icon="head-side-brain" @prefix="fal" />
   {{#if voltage}}
     {{t "states.stimulation-on"}} {{voltage}}mA
   {{else}}
