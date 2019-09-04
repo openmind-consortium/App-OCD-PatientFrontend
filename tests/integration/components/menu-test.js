@@ -1,10 +1,14 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | menu', function(hooks) {
   setupRenderingTest(hooks);
+
+  hooks.beforeEach(function() {
+    this.owner.setupRouter();
+  });
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
@@ -12,7 +16,8 @@ module('Integration | Component | menu', function(hooks) {
 
     await render(hbs`<Menu />`);
 
-    assert.equal(this.element.textContent.trim(), '', 'should render menu');
-
+    assert.ok(find('div.heading'), 'should render menu with heading');
+    assert.ok(find('.nav'), 'should render menu with navigation');
   });
+
 });

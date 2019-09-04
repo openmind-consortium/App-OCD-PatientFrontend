@@ -12,7 +12,7 @@ module('Integration | Component | rec', function(hooks) {
 
     await render(hbs`<Rec />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'Not');
 
   });
 });

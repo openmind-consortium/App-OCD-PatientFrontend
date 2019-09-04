@@ -11,8 +11,6 @@ module('Integration | Component | rec-button', function(hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     await render(hbs`<RecButton />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
+    assert.equal(this.element.textContent.trim(), 'Start recording', 'should render button with text start recording');
   });
 });
