@@ -7,30 +7,25 @@
   </div>
 
 
-  <BsNav @type="nav" as |nav|>
-    <nav.item @route="record" @class="nav-link nav-record">
-      <span class="link-name">
-        {{t "menus.application.record"}}
-      </span>
-      <FaIcon @icon="angle-right" @prefix="fal"/>
-    </nav.item>
-  </BsNav>
+  <LinkTo @route="record"  @class="nav-link nav-record">
+    <span class="link-name">
+      {{t "menus.application.record"}}
+    </span>
+    <FaIcon @icon="angle-right" @prefix="fal"/>
+  </LinkTo>
 
-  <BsNav @type="nav" as |nav|>
-    <nav.item @route="help" @class="nav-link nav-help">
-      <span class="link-name">
-        {{t "menus.application.help"}}
-      </span>
-      <FaIcon @icon="angle-right" @prefix="fal" />
-    </nav.item>
-  </BsNav>
+  <LinkTo @route="help"  @class="nav-link nav-help">
+    <span class="link-name">
+      {{t "menus.application.help"}}
+    </span>
+    <FaIcon @icon="angle-right" @prefix="fal"/>
+  </LinkTo>
 
-  <BsNav @type="nav" as |nav|>
-    <nav.item @route="settings" @class="nav-link nav-settings">
-      <span class="link-name">
-        {{t "menus.application.settings"}}
-      </span>
-      <FaIcon @icon="angle-right" @prefix="fal" />
-    </nav.item>
-  </BsNav>
+  <LinkTo @route="settings"  @class="nav-link nav-settings">
+    <span class="link-name">
+      {{t "menus.application.settings"}}
+    </span>
+    <FaIcon @icon="angle-right" @prefix="fal"/>
+  </LinkTo>
+
 </div>

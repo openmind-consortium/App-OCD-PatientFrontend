@@ -17,7 +17,10 @@ module('Integration | Component | menu', function(hooks) {
     await render(hbs`<Menu />`);
 
     assert.ok(find('div.heading'), 'should render menu with heading');
-    assert.ok(find('.nav'), 'should render menu with navigation');
+    assert.ok(find('.nav-record'), 'should render menu with record link');
+    assert.ok(find('.nav-settings'), 'should render menu with settings link');
+    assert.ok(find('.nav-help'), 'should render menu with help link');
+
   });
 
 });

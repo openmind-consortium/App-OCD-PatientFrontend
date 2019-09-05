@@ -13,13 +13,13 @@ module('Acceptance | index', function(hooks) {
 
   test('navigation works', async function(assert) {
     await visit('/');
-    await click('.nav-record a');
+    await click('.nav-record');
     assert.equal(currentURL(), '/record', 'record should link to /record route');
 
-    await click('.nav-help a');
+    await click('.nav-help');
     assert.equal(currentURL(), '/help', 'help should link to /help route');
 
-    await click('.nav-settings a');
+    await click('.nav-settings');
     assert.equal(currentURL(), '/settings', 'help should link to /settings route');
 
   })
