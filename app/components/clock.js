@@ -9,7 +9,7 @@ export default Component.extend({
     const locale = this.i18n.locale;
     return new Intl.DateTimeFormat(locale, {
       year: 'numeric', month: 'long', day: 'numeric',
-      hour: 'numeric', minute: 'numeric', second: 'numeric'
+      hour: 'numeric', minute: 'numeric'
     });
   }),
   time: computed('formatter', 'clock.second', 'showClock', function () {

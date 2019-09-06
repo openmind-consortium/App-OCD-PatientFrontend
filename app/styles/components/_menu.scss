@@ -1,15 +1,21 @@
 .menu {
   @extend .d-flex;
   @extend .flex-column;
-  @extend .justify-content-end;
+  @extend .justify-content-start;
+  @extend .p-3;
   width: 100%;
   text-align: right;
-  height: 96vh;
+  height: 100vh;
 }
 
 .bg-dark-mode {
   .menu  {
     @extend .bg-dark;
+  }
+  .heading {
+    span {
+      @extend .text-success;
+    }
   }
 }
 
@@ -18,15 +24,27 @@
     @extend .bg-light;
     @extend .text-dark;
   }
+  .heading {
+    span {
+      @extend .text-primary;
+    }
+  }
 }
 
 .heading {
   @extend .p-5;
+  @extend .w-100;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .flex-column;
+  @extend .align-items-center;
   h1 {
-    font-size: $font-size-base * 5;
+    font-size: $font-size-base * 3;
   }
-  p {
-    font-size: $font-size-base * 1.5;
+  span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
 

@@ -1,9 +1,12 @@
 <div class="menu">
   <div class="heading">
     {{#link-to "index"}}
-      <h1>{{t "application.title"}}</h1>
+      <span>
+        <FaIcon @icon="head-side-brain" @prefix="fas" @size="2x"/>
+        <h1>{{t "application.title"}}</h1>
+      </span>
     {{/link-to}}
-    <p>{{t "application.description"}}</p>
+
   </div>
 
 
