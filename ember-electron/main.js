@@ -1,7 +1,8 @@
 /* eslint-env node */
-const { app, BrowserWindow, protocol } = require('electron');
+const { app, BrowserWindow, protocol, ipcMain } = require('electron');
 const { dirname, join, resolve } = require('path');
 const protocolServe = require('electron-protocol-serve');
+const sendAndReceive = require('./zmq-client')
 
 let mainWindow = null;
 
@@ -30,8 +31,8 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 900,
   });
 
   // If you want to open up dev tools programmatically, call
@@ -65,6 +66,19 @@ app.on('ready', () => {
     mainWindow = null;
   });
 });
+
+// IPC Communication
+
+// receive requests
+ipcMain.on('request', (event, args) => {
+  let request = args
+  sendAndReceive()
+    .then((res) => {
+      console.log(res)
+      event.sender.send('response', res)
+    })
+    .catch((err) => console.log(err))
+})
 
 // Handle an unhandled error in the main thread
 //
