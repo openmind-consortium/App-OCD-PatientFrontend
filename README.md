@@ -20,6 +20,8 @@ You will need the following things properly installed on your computer.
 * `cd rcps-ember-electron`
 * `npm install`
 
+**NOTE**: Currently you need to comment out line 105 of `node_modules/electron-forge/dist/api/start.js` to get `electron ember` working as rebuilding fails.
+
 ## Running / Development
 
 * `ember serve`

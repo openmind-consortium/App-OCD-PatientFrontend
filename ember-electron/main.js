@@ -71,13 +71,15 @@ app.on('ready', () => {
 
 // receive requests
 ipcMain.on('request', (event, args) => {
-  let request = args
-  sendAndReceive()
+  sendAndReceive(args)
     .then((res) => {
-      console.log(res)
-      event.sender.send('response', res)
+      event.sender.send('response', res) // this is the old way of sending a message back, if we upgrade electron, this will change
     })
-    .catch((err) => console.log(err))
+    .catch((err) => {
+      event.sender.send('response', "{error: 'Error receiving message from Summit API'}")
+      console.log("Error caught in return ipc message from Summit API")
+      console.log(err)
+    })
 })
 
 // Handle an unhandled error in the main thread
