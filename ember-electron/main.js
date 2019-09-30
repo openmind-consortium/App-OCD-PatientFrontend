@@ -68,6 +68,7 @@ app.on('ready', () => {
 });
 
 // IPC Communication
+const error_message = '{"message_type": "result", "message": "error", "payload": {"status": false", "error-code": -1, "error-message": "zmq error"}}'
 
 // receive requests
 ipcMain.on('request', (event, args) => {
@@ -76,7 +77,7 @@ ipcMain.on('request', (event, args) => {
       event.sender.send('response', res) // this is the old way of sending a message back, if we upgrade electron, this will change
     })
     .catch((err) => {
-      event.sender.send('response', "{error: 'Error receiving message from Summit API'}")
+      event.sender.send('response', error_message)
       console.log("Error caught in return ipc message from Summit API")
       console.log(err)
     })

@@ -3,10 +3,13 @@
   <div class="content-item">
     <h2 class="item-title">{{t "content.record.on-demand-recording"}}</h2>
     <div class="button-group">
-      <RecButton @recording={{model.recording}} @toggleRec={{action (route-action "toggleRec")}}/>
+      <RecButton @recording={{model.recording}}/>
     </div>
     <h1 class="status">
       <Rec @recording={{model.recording}} @text="Recording"/>
+      <div>
+        <p>{{model.error}}</p>
+      </div>
     </h1>
   </div>
 </Content>

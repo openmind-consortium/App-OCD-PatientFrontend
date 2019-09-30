@@ -4,12 +4,18 @@ const {ipcRenderer} = window.requireNode('electron');
 export default Service.extend({
   init() {
     this._super(...arguments);
-    ipcRenderer.on('response', (event, args) => {
-      console.log(args)
-    })
   },
 
   request(message) {
-    ipcRenderer.send('request', message)
+    return new Promise(resolve => {
+      ipcRenderer.send('request', message)
+      ipcRenderer.on('response', (event, args) => {
+        console.log(args)
+        const message = JSON.parse(args)
+        resolve(message)
+      })
+    })
+
+
   }
 });
