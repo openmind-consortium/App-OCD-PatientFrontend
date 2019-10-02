@@ -8,6 +8,10 @@
 @import "components/settings";
 @import "components/index";
 
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 .bg-dark-mode a {
   @extend .text-light;
   &:hover {
