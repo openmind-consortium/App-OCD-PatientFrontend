@@ -44,7 +44,7 @@
 .bg-light-mode {
   .idle {
     @extend .text-dark;
-    background-color: $bg-light-mode ;
+    background-color: $bg-light-mode;
   }
   .pulse {
     background-color: $bg-light-mode;
