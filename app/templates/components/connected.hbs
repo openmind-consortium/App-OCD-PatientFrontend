@@ -1,0 +1,8 @@
+<span class="mr-3 connected {{if err "active"}}">
+  <FaIcon @icon="wifi-2" @prefix="fal" />
+  {{#if err}}
+    Error: {{err}}
+  {{else}}
+    {{t "content.help.connected"}}
+  {{/if}}
+</span>

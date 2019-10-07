@@ -4,8 +4,15 @@
     <p class="h3 col-md-4">{{t "content.help.emergency"}}</p>
     <div class="col-md-8 d-flex flex-column">
       <p class="h5 mb-4">{{t "content.help.if-medical-emergency"}}</p>
-      <a class="btn btn-danger btn-large align-self-center" href="tel:911"><p class="h2">{{t "content.help.call"}} 911</p></a>
       <p class="h5 mt-5">{{t "content.help.if-technical-difficulties"}}</p>
+    </div>
+  </div>
+
+  <div class="d-flex pt-5">
+    <p class="h3 col-md-4">{{t "content.help.status"}}</p>
+    <div class="col-md-8 d-flex flex-column">
+      <p class="h5 mb-4">Current Status: {{if model.error model.error (t "content.help.connected")}}</p>
+      <ConnectButton @device={{model}}/>
     </div>
   </div>
 

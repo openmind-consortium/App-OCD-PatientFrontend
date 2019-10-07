@@ -9,17 +9,16 @@ export default Service.extend({
   request(message) {
     return new Promise(resolve => {
       let message_type = message["message"]
-      console.log(message)
       let message_str = JSON.stringify(message)
       ipcRenderer.send('request', message_str)
-      ipcRenderer.on('response', (event, args) => {
-        console.log(args)
+      const respHandler = (event, args) => {
         const resp = JSON.parse(args)
         if (resp["message"] === message_type) {
-          console.log(resp)
           resolve(resp)
+          ipcRenderer.removeListener('response', respHandler) // this self-referencing removal seems weird, but seems to work?
         }
-      })
+      }
+      ipcRenderer.on('response', respHandler)
     })
   }
 });

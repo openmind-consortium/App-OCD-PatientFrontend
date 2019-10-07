@@ -1,0 +1,19 @@
+.connected {
+  @extend .badge;
+  font-size: $font-size-base * 0.8;
+  background-color: $bg-light-mode;
+  &.active {
+    font-size: $font-size-base * 0.8;
+    border: black;
+  }
+}
+
+.bg-dark-mode {
+  .connected {
+    background-color: $bg-dark-mode !important;
+    @extend .text-light;
+    &.active {
+      color: $warning !important;
+    }
+  }
+}

@@ -19,7 +19,7 @@ export default Route.extend(I18nMixin, {
       battery: 0,
       recording: false,
       stimulation_voltage: 0,
-      error: ''
+      error: 'Connecting...'
     });
   },
 
@@ -61,7 +61,7 @@ export default Route.extend(I18nMixin, {
           })
         })
     }
-    let device = model.store.findRecord('device', 1)
+    let device = model.store.peekRecord('device', 1)
     getStatus(device)
     window.setInterval(getStatus, 60000, device)
   },

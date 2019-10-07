@@ -42,7 +42,6 @@ async function sendAndReceive(message) {
   try {
     const res = await race(sock.receive(), 3000, error_string)
     str = res.toString()
-    console.log(str)
     return str
   } catch (err) {
     console.log("Error caught in zmq communication with Summit API")
