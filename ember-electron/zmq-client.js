@@ -27,13 +27,22 @@ async function sendAndReceive(message) {
     throw(err)
   }
 
+  let message_obj = JSON.parse(message)
+  let message_type = message_obj["message"]
+
   await sock.send(message)
 
-  const error_message = '{"message_type": "result", "message": "error", "payload": {"status": false", "error-code": -1, "error-message": "timeout"}}'
+  const error_message = {
+    message_type: "result",
+    message: message_type,
+    payload: {status: false, error_code: -1, error_message: "zmq timeout"}}
+
+  const error_string = JSON.stringify(error_message)
 
   try {
-    const res = await race(sock.receive(), 3000, error_message)
+    const res = await race(sock.receive(), 3000, error_string)
     str = res.toString()
+    console.log(str)
     return str
   } catch (err) {
     console.log("Error caught in zmq communication with Summit API")

@@ -82,7 +82,7 @@
     "electron-compile": "^6.4.4",
     "electron-protocol-serve": "^1.3.0",
     "electron-squirrel-startup": "^1.0.0",
-    "zeromq-ng": "^5.0.0-beta.15"
+    "zeromq-ng": "5.0.0-beta.15"
   },
   "config": {
     "forge": "./ember-electron/electron-forge-config.js"

@@ -8,14 +8,18 @@ export default Service.extend({
 
   request(message) {
     return new Promise(resolve => {
-      ipcRenderer.send('request', message)
+      let message_type = message["message"]
+      console.log(message)
+      let message_str = JSON.stringify(message)
+      ipcRenderer.send('request', message_str)
       ipcRenderer.on('response', (event, args) => {
         console.log(args)
-        const message = JSON.parse(args)
-        resolve(message)
+        const resp = JSON.parse(args)
+        if (resp["message"] === message_type) {
+          console.log(resp)
+          resolve(resp)
+        }
       })
     })
-
-
   }
 });

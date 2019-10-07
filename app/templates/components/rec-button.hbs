@@ -1,5 +1,5 @@
 <div class="d-flex flex-column align-items-center justify-content-center">
-  <BsButton @type="dark button" @onClick={{action "toggleRec"}} @text={{if recording (t "content.record.stop-recording") (t "content.record.start-recording")}} >
+  <BsButton @type="dark button" @onClick={{action "toggleRec" device}} @text={{if recording (t "content.record.stop-recording") (t "content.record.start-recording")}} >
     <span>
       <FaIcon
         @icon={{if recording "square" "circle"}}
