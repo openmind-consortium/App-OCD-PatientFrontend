@@ -25,42 +25,21 @@ export default Route.extend(I18nMixin, {
 
   afterModel(model) {
     const getStatus = (device) => {
-      console.log("getting battery status")
-      const batteryMessage = {message_type: 'get', message: 'battery'}
-      const batteryStatus = this.zmq.request(batteryMessage)
-      batteryStatus
+      const statusMessage = {message_type: 'get', message: 'device_info'}
+      const deviceStatus = this.zmq.request(statusMessage)
+      deviceStatus
         .then((response) => {
           if (response['payload']['success']) {
-            device.set('battery', response['payload']['battery_level']/100)
+            device.set('error', '')
+            device.set('stimulation_voltage', response['payload']['stim_on'])
+            device.set('recording', response['payload']['sense_on'])
+            device.set('battery', response['payload']['battery_level'])
           } else {
             device.set('error', response['payload']['error_message'])
           }
         })
-        .then(() => {
-          console.log("getting stim status")
-          const stimMessage = {message_type: 'get', message: 'stim-status'}
-          const stimStatus = this.zmq.request(stimMessage)
-          stimStatus.then((response) => {
-            if (response['payload']['success']) {
-              device.set('stimulation_voltage', response['payload']['stim_on'])
-            } else {
-              device.set('error', response['payload']['error_message'])
-            }
-          })
-          .then(() => {
-            console.log("getting sense status")
-            const senseMessage = {message_type: 'get', message: 'sense-status'}
-            const senseStatus = this.zmq.request(senseMessage)
-            senseStatus.then((response) => {
-              if (response['payload']['success']) {
-                device.set('recording', response['payload']['sense_on'])
-              } else {
-                device.set('error', response['payload']['error_message'])
-              }
-            })
-          })
-        })
     }
+
     let device = model.store.peekRecord('device', 1)
     getStatus(device)
     window.setInterval(getStatus, 60000, device)

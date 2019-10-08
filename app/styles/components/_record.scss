@@ -74,7 +74,7 @@
   border-radius: 2rem;
 }
 
-.button {
+.rec-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,4 +104,8 @@
 
 .timer {
   font-size: $font-size-base * 5;
+}
+
+.error {
+  color: $warning;
 }

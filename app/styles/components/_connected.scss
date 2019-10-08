@@ -2,7 +2,7 @@
   @extend .badge;
   font-size: $font-size-base * 0.8;
   background-color: $bg-light-mode;
-  &.active {
+  &.err {
     font-size: $font-size-base * 0.8;
     border: black;
   }
@@ -12,8 +12,11 @@
   .connected {
     background-color: $bg-dark-mode !important;
     @extend .text-light;
-    &.active {
+    &.err {
       color: $warning !important;
+    }
+    &.good {
+      color: $success !important;
     }
   }
 }

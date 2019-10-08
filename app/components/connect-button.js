@@ -6,15 +6,15 @@ export default Component.extend({
   actions: {
     updateStatus(device) {
       // let rec = this.get('model.device')
-      let message = {message_type: 'get', message: 'device_status'}
+      let message = {message_type: 'get', message: 'device_info'}
 
       const result = this.zmq.request(message)
       result.then((response) => {
         if (response["payload"]["success"]) {
           device.set('error', '')
-          device.set('recording', response["payload"]["sense_status"])
-          device.set('recording', response["payload"]["battery"] / 100)
-          device.set('recording', response["payload"]["stim_status"])
+          device.set('stimulation_voltage', response['payload']['stim_on'])
+          device.set('recording', response['payload']['sense_on'])
+          device.set('battery', response['payload']['battery_level'])
         } else {
           device.set('error', response["payload"]["error_message"])
         }
