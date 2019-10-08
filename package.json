@@ -1,11 +1,17 @@
 {
   "name": "rcps-ember",
-  "version": "0.0.0",
+  "procuctName": "My RC+S",
+  "description": "App to check status of INS, and turn recording on/off",
+  "version": "0.0.1",
   "private": true,
-  "description": "Small description for rcps-ember goes here",
-  "repository": "",
+  "author": {
+    "name": "Brown CCV",
+    "email": "ccv-bot@brown.edu",
+    "url": "ccv.brown.edu"
+  },
+  "repository": "https://github.com/neuromotion/rcps-frontend-electron",
+  "homepage": "https://github.com/neuromotion/rcps-frontend-electron",
   "license": "MIT",
-  "author": "",
   "main": "ember-electron/main.js",
   "directories": {
     "doc": "doc",
