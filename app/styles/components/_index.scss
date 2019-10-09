@@ -33,6 +33,9 @@
 .status span {
   font-size: $font-size-base * 2 !important;
   border: none;
+  @extend .d-flex;
+  @extend .justify-content-between;
+  @extend .pl-4;
 }
 
 .button-container {

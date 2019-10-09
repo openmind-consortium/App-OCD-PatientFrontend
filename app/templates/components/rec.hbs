@@ -1,8 +1,10 @@
 <span class="badge mr-3 {{status}}">
   <FaIcon @icon="dot-circle" />
-  {{#if recording }}
-    {{text}}
-  {{else}}
-    Not {{text}}
-  {{/if}}
+  <span>
+    {{#if recording }}
+      {{text}}
+    {{else}}
+      Not {{text}}
+    {{/if}}
+  </span>
 </span>
