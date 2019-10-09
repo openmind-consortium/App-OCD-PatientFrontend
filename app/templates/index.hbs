@@ -4,8 +4,14 @@
   <div class="d-flex flex-column">
     <h3 class="pt-5">{{t "status.here-is-the-current-status"}}</h3>
     <h1 class="status"><Connected @err={{model.error}}/></h1>
+      {{#if model.error }}
+      <div class="button-container">
+        <ConnectButton />
+      </div>
+      {{ else }}
     <h1 class="status"><Stimulus @voltage={{model.stimulation_voltage}}/></h1>
     <h1 class="status"><Rec @recording={{model.recording}} @text="Recording"/></h1>
+    {{/if}}
   </div>
 
 </Content>

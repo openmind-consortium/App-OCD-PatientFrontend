@@ -6,11 +6,21 @@
   .status, .status span {
     @extend .bg-dark;
   }
+  .button-connect {
+    button {
+      @extend .btn-warning;
+    }
+  }
 }
 
 .bg-light-mode {
   .status, .status span {
     @extend .bg-light;
+  }
+  .button-connect {
+    button {
+      @extend .btn-primary;
+    }
   }
 }
 
@@ -23,4 +33,19 @@
 .status span {
   font-size: $font-size-base * 2 !important;
   border: none;
+}
+
+.button-container {
+  margin-top: 2rem;
+}
+
+.button-connect {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  button {
+    font-size: 1.6rem !important;
+    font-weight: bold !important;
+  }
 }
