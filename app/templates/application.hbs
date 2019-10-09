@@ -8,6 +8,7 @@
       </div>
 
       <div class="info-device d-flex">
+        <Connected @err={{model.error}} />
         <Stimulus @voltage={{model.stimulation_voltage}}/>
         <Rec @recording={{model.recording}} @text="REC"/>
         <Battery @value={{model.battery}} />

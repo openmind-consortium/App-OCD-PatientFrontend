@@ -17,3 +17,7 @@
 .item-title {
   @extend .pt-4;
 }
+
+#Help {
+  overflow-y: scroll;
+}
