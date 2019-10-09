@@ -58,12 +58,23 @@
   .content-item {
     @extend .bg-dark;
   }
+  .error {
+    color: $warning;
+  }
 }
 .bg-light-mode {
   .content-item {
     @extend .bg-light;
   }
+  .error {
+    color: $danger;
+  }
 }
+.error {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
 .content-item {
   @extend .py-5;
   @extend .px-3;
@@ -104,8 +115,4 @@
 
 .timer {
   font-size: $font-size-base * 5;
-}
-
-.error {
-  color: $warning;
 }
