@@ -12,15 +12,7 @@ module('Integration | Component | connect-button', function(hooks) {
 
     await render(hbs`<ConnectButton />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'Connect to RC+S');
 
-    // Template block usage:
-    await render(hbs`
-      <ConnectButton>
-        template block text
-      </ConnectButton>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

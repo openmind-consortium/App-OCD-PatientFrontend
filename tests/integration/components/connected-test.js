@@ -12,15 +12,6 @@ module('Integration | Component | connected', function(hooks) {
 
     await render(hbs`<Connected />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Connected>
-        template block text
-      </Connected>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'RC+S Connected');
   });
 });

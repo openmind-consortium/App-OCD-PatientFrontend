@@ -32,8 +32,8 @@
       "usage": "How to use MyRC+S",
       "emergency": "Emergency",
       "status": "Connection Status",
-      "connected": "INS Connected",
-      "connect": "Connect to INS",
+      "connected": "RC+S Connected",
+      "connect": "Connect to RC+S",
       "call": "CALL",
       "if-medical-emergency": "If you are having a medical emergency, please call 911.",
       "if-technical-difficulties": "If you are having technical difficulties and need assistance, please call XXX-XXX-XXXX or email xxxxxx@gmail.com",
@@ -57,6 +57,12 @@
     "hello": "Hello"
   },
   "status": {
-    "here-is-the-current-status": "Here is the current status of your RC+S device"
+    "here-is-the-current-status": "Here is the current status of your RC+S device",
+    "error": "Error"
+  },
+  "device": {
+    "rcps": "RC+S",
+    "device": "device",
+    "ins": "INS"
   }
 }

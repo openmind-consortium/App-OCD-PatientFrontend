@@ -10,7 +10,10 @@ export default Component.extend({
     if (this.value === 0) {
       fa = "empty"
     }
-    if (0 < this.value && this.value < 0.30) {
+    if (0 < this.value <= 0.1) {
+      fa = "slash"
+    }
+    if (0.1 < this.value && this.value < 0.30) {
       fa = "quarter"
     }
     if (0.30 <= this.value && this.value < 0.60) {
