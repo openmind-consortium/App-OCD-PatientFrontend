@@ -10,13 +10,14 @@ export default Component.extend({
 
       const result = this.zmq.request(message)
       result.then((response) => {
-        if (response["payload"]["success"]) {
+        if (response['payload']['success']) {
           device.set('error', '')
           device.set('stimulation_voltage', response['payload']['stim_on'])
           device.set('recording', response['payload']['sense_on'])
           device.set('battery', response['payload']['battery_level'])
         } else {
-          device.set('error', response["payload"]["error_message"])
+          console.log(response['payload']['error_message'])
+          device.set('error', response['payload']['error_message'])
         }
       })
     }

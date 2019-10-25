@@ -35,7 +35,7 @@ async function sendAndReceive(message) {
   const error_message = {
     message_type: "result",
     message: message_type,
-    payload: {status: false, error_code: -1, error_message: "zmq timeout"}}
+    payload: {status: false, error_code: -1, error_message: "Device not responding."}}
 
   const error_string = JSON.stringify(error_message)
 
@@ -45,6 +45,7 @@ async function sendAndReceive(message) {
     return str
   } catch (err) {
     console.log("Error caught in zmq communication with Summit API")
+    console.log(err)
     throw(err)
   }
 }

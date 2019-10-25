@@ -33,7 +33,7 @@
       "emergency": "Emergency",
       "status": "Connection Status",
       "connected": "RC+S Connected",
-      "connect": "Connect to RC+S",
+      "connect": "Sync RC+S",
       "call": "CALL",
       "if-medical-emergency": "If you are having a medical emergency, please call 911.",
       "if-technical-difficulties": "If you are having technical difficulties and need assistance, please call XXX-XXX-XXXX or email xxxxxx@gmail.com",
@@ -42,6 +42,10 @@
       },
       "settings": {
         "text": "You can set your preferred language, username and switch between light and dark mode."
+      },
+      "troublehoot": {
+        "title": "Troubleshoot",
+        "text": "Ensure the CTM is charged, on, and nearby the Surface Go. Make sure INS is charged. If you're still having issues, try restarting the Surface. If nothing works, call technical support."
       }
     }
   },

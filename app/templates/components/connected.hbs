@@ -4,7 +4,7 @@
     <FaIcon @icon="slash" @prefix="fas" @mask="router"/>
     <FaIcon @icon="slash" @prefix="fas" @transform="up-1" />
   </span>
-    {{t "status.error"}}: {{err}}
+    <span class="err">{{err}}</span>
   {{else}}
     <FaIcon @icon="router" @prefix="fas" />
     <span>{{t "content.help.connected"}} </span>
