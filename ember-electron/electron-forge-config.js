@@ -1,3 +1,6 @@
+const path = require('path');
+const rootPath = path.join('./');
+
 module.exports = {
   "make_targets": {
     "win32": [
@@ -12,7 +15,8 @@ module.exports = {
     ]
   },
   "electronPackagerConfig": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    icon: path.join(rootPath, 'ember-electron', 'resources', 'icons', 'icon')
   },
   "electronWinstallerConfig": {
     "name": "rcps_ember"
