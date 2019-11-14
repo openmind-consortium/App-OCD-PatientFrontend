@@ -29,6 +29,8 @@ jobs:
 
     # install, test, build package
     - name: npm install
+      env:
+        FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
       run: npm install
 
     # Build electron app package installers
