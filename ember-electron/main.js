@@ -1,5 +1,8 @@
 /* eslint-env node */
 const { app, BrowserWindow, protocol, ipcMain } = require('electron');
+
+if (require('electron-squirrel-startup')) return app.quit();
+
 const { dirname, join, resolve } = require('path');
 const protocolServe = require('electron-protocol-serve');
 const sendAndReceive = require('./zmq-client')

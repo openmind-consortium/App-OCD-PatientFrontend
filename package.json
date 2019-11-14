@@ -40,7 +40,7 @@
     "bootstrap": "^4.3.1",
     "broccoli-asset-rev": "^3.0.0",
     "devtron": "^1.4.0",
-    "electron-forge": "^5.2.4",
+    "electron-forge": "git+https://github.com/neuromotion/rcps-electron-forge.git",
     "electron-prebuilt-compile": "4.0.0",
     "ember-a11y-testing": "^1.0.0",
     "ember-ajax": "^5.0.0",
