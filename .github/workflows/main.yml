@@ -24,9 +24,6 @@ jobs:
       with:
         node-version: 12.x
 
-    - name: create .npmrc
-      run: echo ${{ secrets.NPMRC }} > .npmrc
-
     # install, test, build package
     - name: npm install
       env:
