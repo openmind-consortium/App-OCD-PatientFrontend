@@ -29,10 +29,6 @@ jobs:
       with:
         node-version: 12.x
 
-    # install windows-build-tools
-#     - name: windows build tools
-#       run: npm install --global windows-build-tools
-
     # install, test, build package
     - name: npm install
       shell: bash
