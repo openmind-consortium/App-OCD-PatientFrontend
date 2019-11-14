@@ -1,0 +1,41 @@
+name: Package Electron
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    # Set up js package
+    - uses: actions/checkout@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    # install, test, build package
+    - name: npm install
+      run: npm install
+
+    # Build electron app package installers
+    - name: package electron - windows
+      run: npm run make
+
+
+    # Upload installers to github action
+    - name: upload win-installer
+      uses: actions/upload-artifact@master
+      with:
+        name: win-installer
+        path: electron-out/make/squirrel.windows/x64
