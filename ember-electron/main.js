@@ -1,7 +1,11 @@
 /* eslint-env node */
-const { app, BrowserWindow, protocol } = require('electron');
+const { app, BrowserWindow, protocol, ipcMain } = require('electron');
+
+if (require('electron-squirrel-startup')) return app.quit();
+
 const { dirname, join, resolve } = require('path');
 const protocolServe = require('electron-protocol-serve');
+const sendAndReceive = require('./zmq-client')
 
 let mainWindow = null;
 
@@ -30,8 +34,8 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 900,
   });
 
   // If you want to open up dev tools programmatically, call
@@ -65,6 +69,22 @@ app.on('ready', () => {
     mainWindow = null;
   });
 });
+
+// IPC Communication
+const error_message = '{"message_type": "result", "message": "error", "payload": {"status": false", "error-code": -1, "error-message": "zmq error"}}'
+
+// receive requests
+ipcMain.on('request', (event, args) => {
+  sendAndReceive(args)
+    .then((res) => {
+      event.sender.send('response', res) // this is the old way of sending a message back, if we upgrade electron, this will change
+    })
+    .catch((err) => {
+      event.sender.send('response', error_message)
+      console.log("Error caught in return ipc message from Summit API")
+      console.log(err)
+    })
+})
 
 // Handle an unhandled error in the main thread
 //

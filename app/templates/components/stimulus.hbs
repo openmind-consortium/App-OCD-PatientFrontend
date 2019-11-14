@@ -1,8 +1,10 @@
 <span class="mr-3 stimulus {{if voltage "active"}}">
   <FaIcon @icon="head-side-brain" @prefix="fal" />
-  {{#if voltage}}
-    {{t "states.stimulation-on"}} {{voltage}}mA
-  {{else}}
-    {{t "states.stimulation-off"}}
-  {{/if}}
+  <span>
+    {{#if voltage}}
+      {{t "states.stimulation-on"}}
+    {{else}}
+      {{t "states.stimulation-off"}}
+    {{/if}}
+  </span>
 </span>

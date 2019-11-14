@@ -4,15 +4,17 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
   zmq: service('zmq-client'),
   actions: {
-    toggleRec(device) {
-      let message = {message_type: 'post', message: 'sense_on'}
-      if (device.get('recording')) message["message"] = 'sense_off'
+    updateStatus(device) {
+      // let rec = this.get('model.device')
+      let message = {message_type: 'get', message: 'device_info'}
 
       const result = this.zmq.request(message)
       result.then((response) => {
-        if (response["payload"]["success"]) {
+        if (response['payload']['success']) {
           device.set('error', '')
-          device.toggleProperty('recording')
+          device.set('stimulation_voltage', response['payload']['stim_on'])
+          device.set('recording', response['payload']['sense_on'])
+          device.set('battery', response['payload']['battery_level'])
         } else {
           console.log(response['payload']['error_message'])
           device.set('error', response['payload']['error_message'])

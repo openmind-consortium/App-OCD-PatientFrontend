@@ -1,11 +1,16 @@
-<Content>
-  <h1 class="greeting">{{t "greetings.hello"}}, {{settings.userName}}</h1>
+<Content @name="{{t "greetings.hello"}}, {{settings.userName}}">
   <hr>
   <h2><Date /></h2>
   <div class="d-flex flex-column">
     <h3 class="pt-5">{{t "status.here-is-the-current-status"}}</h3>
+    <h1 class="status err"><Connected @err={{model.error}}/></h1>
+    {{#if (and model.error (not-eq model.error "Insufficient Battery"))}}
+    <div class="button-container"><ConnectButton /></div>
+    <div class="button-container"><LinkTo @route="help" class="button-connect">Troubleshoot</LinkTo></div>
+    {{ else }}
     <h1 class="status"><Stimulus @voltage={{model.stimulation_voltage}}/></h1>
     <h1 class="status"><Rec @recording={{model.recording}} @text="Recording"/></h1>
+    {{/if}}
   </div>
 
 </Content>

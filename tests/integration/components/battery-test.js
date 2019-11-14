@@ -15,6 +15,10 @@ module('Integration | Component | battery', function(hooks) {
     assert.equal(this.element.textContent.trim(), '0%', 'text is "0%" when value is 0.');
     assert.ok(find('.fa-battery-empty'), '".fa-battery-empty" when value is 0.');
 
+    this.set('value', 0.05)
+    assert.equal(this.element.textContent.trim(), '0%', 'text is "0%" when value is 0.05');
+    assert.ok(find('.fa-battery-slash'), '".fa-battery-slash" when value is 0.05');
+
     this.set('value', 0.2)
     assert.equal(this.element.textContent.trim(), '20%', 'text is "20%" when value is 0.2.');
     assert.ok(find('.fa-battery-quarter'), '".fa-battery-quarter" when value is 0.2.');

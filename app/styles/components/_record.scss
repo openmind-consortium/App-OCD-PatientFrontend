@@ -44,7 +44,7 @@
 .bg-light-mode {
   .idle {
     @extend .text-dark;
-    background-color: $bg-light-mode ;
+    background-color: $bg-light-mode;
   }
   .pulse {
     background-color: $bg-light-mode;
@@ -58,12 +58,23 @@
   .content-item {
     @extend .bg-dark;
   }
+  .error {
+    color: $warning;
+  }
 }
 .bg-light-mode {
   .content-item {
     @extend .bg-light;
   }
+  .error {
+    color: $danger;
+  }
 }
+.error {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
 .content-item {
   @extend .py-5;
   @extend .px-3;
@@ -74,7 +85,7 @@
   border-radius: 2rem;
 }
 
-.button {
+.rec-button {
   display: flex;
   flex-direction: column;
   justify-content: center;

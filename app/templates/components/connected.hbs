@@ -1,0 +1,12 @@
+<span class="mr-3 connected {{if err "err" "good"}}">
+  {{#if err}}
+  <span class="fa-layers mr-2">
+    <FaIcon @icon="slash" @prefix="fas" @mask="router"/>
+    <FaIcon @icon="slash" @prefix="fas" @transform="up-1" />
+  </span>
+    <span class="err">{{err}}</span>
+  {{else}}
+    <FaIcon @icon="router" @prefix="fas" />
+    <span>{{t "content.help.connected"}} </span>
+  {{/if}}
+</span>

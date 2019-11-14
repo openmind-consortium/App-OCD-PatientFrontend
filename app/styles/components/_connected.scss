@@ -1,24 +1,21 @@
-.stimulus {
+.connected {
   @extend .badge;
   font-size: $font-size-base * 0.8;
   background-color: $bg-light-mode;
-  &.active {
+  &.err {
     font-size: $font-size-base * 0.8;
     border: black;
   }
 }
 
-.fa-bolt {
-  stroke-width: 30px;
-  stroke: $info-bar-dark;
-  color: $info-bar-dark;
-}
-
 .bg-dark-mode {
-  .stimulus {
+  .connected {
     background-color: $bg-dark-mode !important;
     @extend .text-light;
-    &.active {
+    &.err {
+      color: $warning !important;
+    }
+    &.good {
       color: $success !important;
     }
   }
