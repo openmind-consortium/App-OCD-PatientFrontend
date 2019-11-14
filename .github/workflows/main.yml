@@ -24,6 +24,9 @@ jobs:
       with:
         node-version: 12.x
 
+    - name: create .npmrc
+      run: echo ${{ secrets.NPMRC }} > .npmrc
+
     # install, test, build package
     - name: npm install
       run: npm install
@@ -31,7 +34,6 @@ jobs:
     # Build electron app package installers
     - name: package electron - windows
       run: npm run make
-
 
     # Upload installers to github action
     - name: upload win-installer
