@@ -1,0 +1,57 @@
+name: Package Electron
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'ember-electron/**'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    # Set up js package
+    - uses: actions/checkout@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Set package version and name
+      uses: brown-ccv/gh-actions/get-package-info@master
+      id: package_info
+
+    # install, test, build package
+    - name: npm install
+      shell: bash
+      run: |
+        npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+        npm config set "//npm.fontawesome.com/:_authToken" ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
+        npm install
+
+    # Build electron app package installers
+    - name: package electron - windows
+      run: npm run make
+
+    # Upload installers to github release
+    - name: Upload app to release - windows
+      if: startsWith(matrix.os, 'windows')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          electron-out/make/squirrel.windows/x64/${{ steps.package_info.outputs.package_name }}-${{ steps.package_info.outputs.package_version }}-full.nupkg
+          electron-out/make/squirrel.windows/x64/${{ steps.package_info.outputs.package_name }}-${{ steps.package_info.outputs.package_version }}\ Setup.exe
+          electron-out/make/squirrel.windows/x64/RELEASES
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
