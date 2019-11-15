@@ -2,14 +2,8 @@ name: Package Electron
 
 on:
   push:
-    branches:
-      - master
-      - develop
-  pull_request:
-    paths:
-      - 'app/**'
-      - 'ember-electron/**'
-      - '.github/workflows/**'
+    tags:
+      - '*'
 
 jobs:
   build:
