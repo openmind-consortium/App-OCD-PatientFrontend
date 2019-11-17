@@ -16,7 +16,6 @@ export default Component.extend({
           device.set('recording', response['payload']['sense_on'])
           device.set('battery', response['payload']['battery_level'])
         } else {
-          console.log(response['payload']['error_message'])
           device.set('error', response['payload']['error_message'])
         }
       })
