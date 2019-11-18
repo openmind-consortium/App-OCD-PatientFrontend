@@ -10,14 +10,15 @@
       <div class="info-device d-flex">
         <Connected @err={{model.error}} />
         {{#unless model.error}}
-        <Stimulus @voltage={{model.stimulation_voltage}}/>
-        <Rec @recording={{model.recording}} @text="REC"/>
-        <Battery @value={{model.battery}} />
+          <Stimulus @voltage={{model.stimulation_voltage}}/>
+          <Rec @recording={{model.recording}} @text="REC"/>
+          <Battery @value={{model.battery}} />
         {{/unless}}
         {{#if (eq model.error "Insufficient Battery")}}
-        <Battery @value={{model.battery}} />
+          <Battery @value={{model.battery}} />
         {{/if}}
       </div>
+      <QuitButton />
 
     </div>
 

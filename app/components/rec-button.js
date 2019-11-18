@@ -14,7 +14,6 @@ export default Component.extend({
           device.set('error', '')
           device.toggleProperty('recording')
         } else {
-          console.log(response['payload']['error_message'])
           device.set('error', response['payload']['error_message'])
         }
       })

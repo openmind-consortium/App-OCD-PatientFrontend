@@ -33,7 +33,6 @@ html {
   height: 100vh;
   .info-bar {
     @extend .d-flex;
-    @extend .p-2;
     @extend .align-items-center;
     position: fixed;
     width: 100%;
@@ -56,4 +55,11 @@ html {
     background-color: $info-bar-light;
     @extend .text-dark;
   }
+}
+
+.quit {
+  @extend .bg-danger;
+  @extend .text-light;
+  @extend .py-2;
+  border: none;
 }
