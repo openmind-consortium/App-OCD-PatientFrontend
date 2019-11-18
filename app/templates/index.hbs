@@ -11,7 +11,7 @@
       </div>
     {{/if}}
     {{#if (and model.error (eq model.error "Initial INS connection not established"))}}
-      <div class=connecting>
+      <div class="connecting">
         <span>{{t "application.connecting.ins"}}</span>
         <FaIcon @icon="spinner" @spin="true" />
       </div>
