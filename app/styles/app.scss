@@ -46,6 +46,9 @@ html {
   .info-bar {
     background-color: $info-bar-dark;
   }
+  .connecting {
+    @extend .text-warning;
+  }
 }
 
 .bg-light-mode {
@@ -55,8 +58,18 @@ html {
     background-color: $info-bar-light;
     @extend .text-dark;
   }
+  .connecting {
+    @extend .text-primary;
+  }
 }
-
+.connecting {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  span {
+    margin-right: 1rem;
+  }
+}
 .quit {
   @extend .bg-danger;
   @extend .text-light;

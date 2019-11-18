@@ -4,6 +4,18 @@
   <div class="d-flex flex-column">
     <h3 class="pt-5">{{t "status.here-is-the-current-status"}}</h3>
     <h1 class="status err"><Connected @err={{model.error}}/></h1>
+    {{#if (and model.error (eq model.error "Initial CTM connection not established"))}}
+      <div class="connecting">
+        <span>{{t "application.connecting.ctm"}}</span>
+        <FaIcon @icon="spinner" @spin="true" />
+      </div>
+    {{/if}}
+    {{#if (and model.error (eq model.error "Initial INS connection not established"))}}
+      <div class=connecting>
+        <span>{{t "application.connecting.ins"}}</span>
+        <FaIcon @icon="spinner" @spin="true" />
+      </div>
+    {{/if}}
     {{#if (and model.error (not-eq model.error "Insufficient Battery"))}}
       <div class="button-container"><ConnectButton /></div>
       <div class="button-container"><LinkTo @route="help" class="button-connect">Troubleshoot</LinkTo></div>
