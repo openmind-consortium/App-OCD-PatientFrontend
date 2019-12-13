@@ -41,7 +41,7 @@ export default Route.extend(I18nMixin, {
     }
     let device = model.store.peekRecord('device', 1)
     getStatus(device)
-    window.setInterval(getStatus, 10000, device)
+    window.setInterval(getStatus, 1000, device)
 
   },
 
