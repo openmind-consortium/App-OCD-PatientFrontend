@@ -23,6 +23,7 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
+    "electron": "ember electron",
     "make": "ember electron:make"
   },
   "devDependencies": {
