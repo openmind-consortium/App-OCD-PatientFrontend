@@ -40,7 +40,7 @@ async function sendAndReceive(message) {
   const error_string = JSON.stringify(error_message)
 
   try {
-    const res = await race(sock.receive(), 1000, error_string)
+    const res = await race(sock.receive(), 5000, error_string)
     str = res.toString()
     return str
   } catch (err) {
