@@ -4,9 +4,14 @@
       <FaIcon @icon="slash" @prefix="fas" @mask="router"/>
       <FaIcon @icon="slash" @prefix="fas" @transform="up-1" />
     </span>
-    <span class="err">{{err}}</span>
+    <span class="err">
+      {{t "application.connecting.connecting"}}
+      <span class="ml-1">
+        <FaIcon @icon="circle-notch" @spin="true" />
+      </span>
+    </span>
   {{else}}
     <FaIcon @icon="router" @prefix="fas" />
-    <span>{{t "content.help.connected"}} </span>
+    <span>{{t "content.help.connected"}}</span>
   {{/if}}
 </span>
