@@ -36,8 +36,8 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 900,
-    fullscreen: false,
-    frame: true
+    fullscreen: true,
+    frame: false
   });
 
   // If you want to open up dev tools programmatically, call
