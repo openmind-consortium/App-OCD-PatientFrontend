@@ -2,7 +2,12 @@
   "application": {
     "title": "RC+S",
     "description": "A friendly RC+S controller",
-    "quit": "Quit"
+    "quit": "Quit",
+    "connecting": {
+      "connecting": "Connecting",
+      "ctm": "Connecting to CTM",
+      "ins": "Connecting to INS"
+    }
   },
   "menus": {
     "application": {

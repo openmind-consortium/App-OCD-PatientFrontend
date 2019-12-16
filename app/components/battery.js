@@ -7,22 +7,23 @@ export default Component.extend({
   }),
   level: computed('value', function() {
     let fa;
-    if (this.value === 0) {
+    const val = Math.round(parseFloat(this.value))
+    if (val === 0) {
       fa = "empty"
     }
-    if (0 < this.value <= 0.1) {
+    if (0 < val <= 10) {
       fa = "slash"
     }
-    if (0.1 < this.value && this.value < 0.30) {
+    if (10 < val && val < 30) {
       fa = "quarter"
     }
-    if (0.30 <= this.value && this.value < 0.60) {
+    if (30 <= val && val < 60) {
       fa = "half"
     }
-    if (0.60 <= this.value && this.value < 0.90) {
+    if (60 <= val && val < 90) {
       fa = "three-quarters"
     }
-    if (this.value >= 0.90) {
+    if (val >= 90) {
       fa = "full"
     }
     return fa
