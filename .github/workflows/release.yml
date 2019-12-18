@@ -44,8 +44,8 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          electron-out/make/squirrel.windows/x64/${{ steps.package_info.outputs.package_name }}-${{ steps.package_info.outputs.package_version }}-full.nupkg
-          electron-out/make/squirrel.windows/x64/${{ steps.package_info.outputs.package_name }}-${{ steps.package_info.outputs.package_version }}\ Setup.exe
+          electron-out/make/squirrel.windows/x64/*.nupkg
+          electron-out/make/squirrel.windows/x64/*.exe
           electron-out/make/squirrel.windows/x64/RELEASES
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
