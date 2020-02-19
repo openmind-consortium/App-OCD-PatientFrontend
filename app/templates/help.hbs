@@ -3,9 +3,9 @@
   {{#if model.error }}
     <div class="d-flex border rounded border-warning justify-content-around align-items-center mt-5 p-2">
       <FaIcon @icon="exclamation-triangle" @size="2x" class="text-warning"/>
-        <div class="connecting">
-          <span>{{model.error}}</span>
-        </div>
+      <div class="connecting">
+        <span>{{model.error}}</span>
+      </div>
       <ConnectButton @device={{model}}/>
     </div>
   {{/if}}
