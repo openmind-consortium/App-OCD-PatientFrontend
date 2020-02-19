@@ -36,7 +36,6 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 900,
-    fullscreen: false,
     frame: true
   });
 
