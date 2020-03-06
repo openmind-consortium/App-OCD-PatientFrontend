@@ -49,4 +49,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: win-installer
-        path: electron-out/make/squirrel.windows/x64
+        path: electron-app/out/make/squirrel.windows/x64

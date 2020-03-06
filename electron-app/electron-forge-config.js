@@ -7,7 +7,7 @@ module.exports = {
       "/ember-test(/|$)",
       "/tests(/|$)"
     ],
-    icon: path.join(rootPath, 'resources', 'icons', 'icon')
+    icon: path.join(rootPath, 'electron-app', 'resources', 'icons', 'icon')
   },
   "makers": [
     {
