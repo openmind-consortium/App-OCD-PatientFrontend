@@ -1,4 +1,4 @@
-const { Request } = require('zeromq-ng')
+const { Request } = require('zeromq')
 
 const ZMQ_PORT = 5556
 const ZMQ_IP = `tcp://127.0.0.1:${ZMQ_PORT}`
