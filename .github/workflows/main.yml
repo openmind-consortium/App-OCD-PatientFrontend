@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - debug-build
   pull_request:
     paths:
       - 'app/**'
@@ -19,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest]
+        os: [windows-2016]
 
     steps:
     # Set up js package
@@ -36,6 +37,8 @@ jobs:
         npm config set "@fortawesome:registry" https://npm.fontawesome.com/
         npm config set "//npm.fontawesome.com/:_authToken" ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
         npm install
+        cd electron-app && npm install
+        cd ..
 
     # Build electron app package installers
     - name: package electron - windows
@@ -46,4 +49,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: win-installer
-        path: electron-out/make/squirrel.windows/x64
+        path: electron-app/out/make/squirrel.windows/x64
