@@ -86,7 +86,7 @@ ipcMain.on('request', (event, args) => {
       event.reply('response', res)
     })
     .catch((err) => {
-      event.sender.send('response', error_message)
+      event.reply('response', error_message)
       console.log("Error caught in return ipc message from Summit API")
       console.log(err)
     })
