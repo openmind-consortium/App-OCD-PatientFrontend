@@ -7,7 +7,7 @@ export default Component.extend({
   actions: {
     quit() {
       // Send quit message to summit-interface
-      const message = {message_type: 'post', message: 'quit'}
+      const message = {message_type: 'post', message: 'quit', payload: {}}
       this.zmq.request(message)
 
       // Close electron window
