@@ -14,6 +14,9 @@ function race(promise, timeout, error) {
     promise.then((value) => {
       clearTimeout(timer)
       return value
+    }).catch((err) => {
+      console.log(err)
+      throw err
     })
   ])
 }
@@ -40,13 +43,13 @@ async function sendAndReceive(message) {
   const error_string = JSON.stringify(error_message)
 
   try {
-    const res = await race(sock.receive(), 10000, error_string)
+    const res = await race(sock.receive(), 30000, error_string)
     str = res.toString()
     return str
   } catch (err) {
     console.log("Error caught in zmq communication with Summit API")
     console.log(err)
-    throw(err)
+    throw err
   }
 }
 
