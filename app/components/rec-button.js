@@ -5,7 +5,7 @@ export default Component.extend({
   zmq: service('zmq-client'),
   actions: {
     toggleRec(device) {
-      let message = {message_type: 'post', message: 'sense_on'}
+      let message = {message_type: 'post', message: 'sense_on', payload: {}}
       if (device.get('recording')) message["message"] = 'sense_off'
 
       const result = this.zmq.request(message)
