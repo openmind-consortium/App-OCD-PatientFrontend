@@ -10,6 +10,8 @@ export default Component.extend({
 
       const result = this.zmq.request(message)
       result.then((response) => {
+        console.log(response);
+        console.log(device);
         if (response['payload']['success']) {
           device.set('error', '')
           device.set('stimulation_voltage', response['payload']['stim_on'])
