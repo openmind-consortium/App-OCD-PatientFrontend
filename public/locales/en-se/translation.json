@@ -13,7 +13,8 @@
     "application": {
       "record": "Record",
       "help": "Help",
-      "settings": "Settings"
+      "settings": "Settings",
+      "tasks": "Tasks"
     }
   },
   "locales": {
