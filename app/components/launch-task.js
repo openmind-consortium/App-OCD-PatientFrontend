@@ -4,8 +4,17 @@ const {ipcRenderer} = window.requireNode('electron');
 export default Component.extend({
     actions: {
         launchTasks(taskName) {
-          console.log('launch beads clicked')
-          ipcRenderer.send('taskSpawn', {task: taskName})
+          let taskPath;
+          if (taskName === 'beads') {
+            taskPath = 'beads\\beads.exe'
+          }
+          if (taskName === 'resting') {
+            taskPath = 'resting_state\\resting-state.exe'
+          }
+          if (taskName === 'msit') {
+            taskPath = 'task_msit\\task-msit.exe'
+          }
+          ipcRenderer.send('taskSpawn', {taskPath})
         }
       }
 });

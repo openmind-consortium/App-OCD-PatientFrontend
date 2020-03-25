@@ -23,6 +23,13 @@
     "pt-br": "Português (Brasil)"
   },
   "content": {
+    "tasks": {
+      "title": "Tasks",
+      "subtitle": "",
+      "beads": "Beads",
+      "msit": "MSIT",
+      "resting": "Resting State"
+    },
     "settings": {
       "dark-mode": "Dark mode",
       "set-theme": "Set theme",
