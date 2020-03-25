@@ -25,8 +25,7 @@
     "test": "ember test",
     "electron": "ember electron",
     "make": "ember electron:make",
-    "g": "ember g",
-    "install": "ember install"
+    "g": "ember g"
   },
   "devDependencies": {
     "@ember/jquery": "^1.1.0",
