@@ -1,9 +1,7 @@
 .stimulus {
   @extend .badge;
-  font-size: $font-size-base * 0.8;
   background-color: $bg-light-mode;
   &.active {
-    font-size: $font-size-base * 0.8;
     border: black;
   }
 }

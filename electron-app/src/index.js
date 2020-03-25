@@ -92,6 +92,21 @@ ipcMain.on('request', (event, args) => {
     })
 })
 
+// Functions to launch jsPsych tasks 
+// Beads
+ipcMain.on('taskSpawn', (event, args) => {
+  const spawn = require('child_process').spawn;
+  const home = app.getPath('home');
+  spawn(`${home}\\AppData\\Local\\${args.taskPath}`, {
+    cwd: process.cwd(),
+    env: {
+        REACT_APP_AT_HOME: true
+    },
+    stdio: 'inherit'
+  })
+})
+
+
 // Handle an unhandled error in the main thread
 //
 // Note that 'uncaughtException' is a crude mechanism for exception handling intended to
