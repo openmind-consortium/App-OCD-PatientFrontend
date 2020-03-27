@@ -1,4 +1,4 @@
-<button {{action "launchTasks" taskName}} type="button" class="task-button">
+<button {{action "launchTasks" taskName}} type="button" class="task-button" disabled={{launched}}>
     <p>{{inline-svg (concat "illustrations/" taskName) class="task-icon"}}</p>
     <h2>{{t (concat "content.tasks." taskName) }}</h2>
 </button>
