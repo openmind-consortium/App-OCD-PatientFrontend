@@ -1,17 +1,18 @@
 <Content @name={{t "menus.application.help"}}>
 
   {{#if model.error }}
-  <div class="d-flex border rounded border-warning justify-content-around align-items-center mt-5 p-2">
-    <FaIcon @icon="exclamation-triangle" @size="2x" class="text-warning"/>
+    <div class="d-flex border rounded border-warning justify-content-around align-items-center mt-5 p-2">
+      <FaIcon @icon="exclamation-triangle" @size="2x" class="text-warning"/>
       <div class="connecting">
         <span>{{model.error}}</span>
       </div>
-    <ConnectButton @device={{model}}/>
-  </div>
+      <ConnectButton @device={{model}}/>
+    </div>
   {{/if}}
 
 
   <div class="d-flex pt-5">
+
     <p class="h3 col-md-4">{{t "content.help.emergency"}}</p>
     <div class="col-md-8 d-flex flex-column">
       <p class="h5 mb-4">{{t "content.help.if-medical-emergency"}}</p>

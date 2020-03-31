@@ -10,9 +10,11 @@ const sendAndReceive = require('./zmq-client')
 let mainWindow = null;
 
 // Registering a protocol & schema to serve our Ember application
-protocol.registerStandardSchemes(['serve'], { secure: true });
+protocol.registerSchemesAsPrivileged([
+  { scheme: 'serve', privileges: { standard: true, secure: true, supportFetchAPI: true } }
+]);
 protocolServe({
-  cwd: join(__dirname || resolve(dirname('')), '..', 'ember'),
+  cwd: join(__dirname || resolve(dirname('')), '..', 'ember-dist'),
   app,
   protocol,
 });
@@ -36,8 +38,10 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 900,
-    fullscreen: true,
-    frame: false
+    frame: true,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   // If you want to open up dev tools programmatically, call
@@ -79,14 +83,37 @@ const error_message = '{"message_type": "result", "message": "error", "payload":
 ipcMain.on('request', (event, args) => {
   sendAndReceive(args)
     .then((res) => {
-      event.sender.send('response', res) // this is the old way of sending a message back, if we upgrade electron, this will change
+      event.reply('response', res)
     })
     .catch((err) => {
-      event.sender.send('response', error_message)
+      event.reply('response', JSON.stringify({
+        message_type: "result",
+        message: "error",
+        payload: {
+          status: false,
+          error_code: -1,
+          error_message: err
+        }
+      }));
       console.log("Error caught in return ipc message from Summit API")
       console.log(err)
     })
 })
+
+// Functions to launch jsPsych tasks 
+// Beads
+ipcMain.on('taskSpawn', (event, args) => {
+  const spawn = require('child_process').spawn;
+  const home = app.getPath('home');
+  spawn(`${home}\\AppData\\Local\\${args.taskPath}`, {
+    cwd: process.cwd(),
+    env: {
+        REACT_APP_AT_HOME: true
+    },
+    stdio: 'inherit'
+  })
+})
+
 
 // Handle an unhandled error in the main thread
 //

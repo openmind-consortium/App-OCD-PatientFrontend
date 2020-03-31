@@ -29,6 +29,7 @@ export default Route.extend(I18nMixin, {
       const deviceStatus = this.zmq.request(statusMessage)
       deviceStatus
         .then((response) => {
+          console.log(response);
           if (response['payload']['success']) {
             device.set('error', '')
             device.set('stimulation_voltage', response['payload']['stim_on'])
@@ -41,7 +42,7 @@ export default Route.extend(I18nMixin, {
     }
     let device = model.store.peekRecord('device', 1)
     getStatus(device)
-    window.setInterval(getStatus, 10000, device)
+    window.setInterval(getStatus, 30000, device)
 
   },
 
