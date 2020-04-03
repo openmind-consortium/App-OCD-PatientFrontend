@@ -28,7 +28,8 @@
       "subtitle": "",
       "beads": "Beads",
       "msit": "MSIT",
-      "resting": "Resting State"
+      "resting": "Resting State",
+      "provocation": "Provocation"
     },
     "settings": {
       "dark-mode": "Dark mode",
