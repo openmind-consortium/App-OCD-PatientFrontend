@@ -1,7 +1,7 @@
 {
   "name": "rcps-ember",
   "productName": "rcps-ember",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "App to check status of INS, and turn recording on/off",
   "main": "src/index.js",
   "scripts": {
