@@ -1,11 +1,6 @@
 name: Package Electron
 
 on:
-  push:
-    branches:
-      - master
-      - develop
-      - debug-build
   pull_request:
     paths:
       - 'app/**'
