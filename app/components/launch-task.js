@@ -19,6 +19,7 @@ export default Component.extend({
               break;
             case 'provocation':
               taskPath = 'provocation\\provocation.exe'
+              break;
             default:
               console.log('Wrong task name selected.')
           }
