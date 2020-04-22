@@ -1,5 +1,6 @@
 /* eslint-env node */
 const { app, BrowserWindow, protocol, ipcMain } = require('electron');
+const path = require('path');
 
 if (require('electron-squirrel-startup')) return app.quit();
 
@@ -101,19 +102,19 @@ ipcMain.on('request', (event, args) => {
 })
 
 // Functions to launch jsPsych tasks 
-// Beads
-ipcMain.on('taskSpawn', (event, args) => {
-  const spawn = require('child_process').spawn;
-  const home = app.getPath('home');
-  spawn(`${home}\\AppData\\Local\\${args.taskPath}`, {
-    cwd: process.cwd(),
-    env: {
-        REACT_APP_AT_HOME: true
-    },
-    stdio: 'inherit'
-  })
-})
 
+const execa = require('execa')
+
+ipcMain.on('taskSpawn', (event, args) => {
+  const home = app.getPath('home');
+  const fullPath = path.join(home, 'AppData', 'Local', args.taskPath) 
+  execa(fullPath, 
+    {
+      env: { 
+        REACT_APP_AT_HOME: true
+      }
+    }).stdout.pipe(process.stdout)
+})
 
 // Handle an unhandled error in the main thread
 //
