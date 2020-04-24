@@ -10,10 +10,13 @@ export default Route.extend({
 
   actions: {
     updateName(val) {
-      this.settings.set('userName', val)
+      this.settings.set('userName', val);
     },
     toggleMode() {
       this.settings.toggleProperty('isDark');
+    },
+    toggleProvocation() {
+      this.settings.toggleProperty('showProvocation');
     }
   }
 });

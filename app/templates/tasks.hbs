@@ -4,7 +4,9 @@
         <LaunchTask @taskName="beads" />
         <LaunchTask @taskName="msit" />
         <LaunchTask @taskName="resting" />
-        <LaunchTask @taskName="provocation" />
+        {{#if settings.showProvocation}}
+          <LaunchTask @taskName="provocation" />
+        {{/if}}
     </div>
 
 </Content>

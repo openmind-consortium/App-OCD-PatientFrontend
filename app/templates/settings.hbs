@@ -11,10 +11,31 @@
   <div>
     <label class="p-4">
       <p class="h4">{{t "content.settings.set-theme"}}</p>
-      {{input type="checkbox" checked=model.isDark change=(action (route-action "toggleMode"))}}
-      {{t "content.settings.dark-mode"}}
+      <XToggle
+        @onLabel='Dark'
+        @offLabel='Light'
+        @showLabels={{true}}
+        @theme='material'
+        @value={{model.isDark}}
+        @onToggle={{action (route-action "toggleMode")}}
+      />
     </label>
   </div>
+  <div>
+    <label class="p-4">
+      <p class="h4">{{t "content.settings.show-provocation"}}</p>
+      <XToggle
+        @onLabel='Show'
+        @offLabel='Hide'
+        @showLabels={{true}}
+        @theme='material'
+        @value={{model.showProvocation}}
+        @onToggle={{action (route-action "toggleProvocation")}}
+      />
+    </label>
+  </div>
+
+
 </Content>
 
 {{outlet}}
