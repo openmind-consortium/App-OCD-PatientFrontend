@@ -7,7 +7,8 @@ Storage.reopenClass({
     return {
       isDark: true,
       userName: 'Fer',
-      fontSize: 1
+      fontSize: 1,
+      showProvocation: false
     };
   }
 });
