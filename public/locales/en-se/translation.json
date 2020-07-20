@@ -14,7 +14,7 @@
       "record": "Record",
       "help": "Help",
       "settings": "Settings",
-      "tasks": "Tasks"
+      "tasks": "Playground"
     }
   },
   "locales": {
@@ -24,7 +24,7 @@
   },
   "content": {
     "tasks": {
-      "title": "Tasks",
+      "title": "Playground",
       "subtitle": "",
       "beads": "Beads",
       "msit": "MSIT",
@@ -36,7 +36,7 @@
       "set-theme": "Set theme",
       "language": "Change language",
       "set-user": "Set user name",
-      "show-provocation": "Provocation Task Launcher"
+      "show-provocation": "Provocation Launcher"
     },
     "record": {
       "on-demand-recording": "On demand recording",
