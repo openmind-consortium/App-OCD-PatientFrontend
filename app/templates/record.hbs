@@ -3,11 +3,19 @@
   <div class="content-item">
     <h2 class="item-title">{{t "content.record.on-demand-recording"}}</h2>
     <div class="button-group">
-      <RecButton @recording={{model.recording}} @device={{model}}/>
+      <RecButton @recording={{model.recording}} @device={{model}} @lit={{settings.leadIntegrityTest}}/>
     </div>
-    <h1 class="status">
-      <Rec @recording={{model.recording}} @text="Recording"/>
-    </h1>
+      {{#if (eq model.error 'lit_running')}}
+        <div class="d-flex border rounded border-warning justify-content-around align-items-center mt-5 p-2">
+        <div class="connecting">
+            <span> {{ t "content.help.lit_running"}}</span>
+          </div>
+        </div>
+      {{else}}
+        <h1 class="status">
+          <Rec @recording={{model.recording}} @text="Recording"/>
+        </h1>
+      {{/if}}
   </div>
 </Content>
 

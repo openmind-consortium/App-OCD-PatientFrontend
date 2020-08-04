@@ -34,6 +34,19 @@
       />
     </label>
   </div>
+  <div>
+    <label class="p-4">
+      <p class="h4">{{t "content.settings.toggle-lead-integrity-test"}}</p>
+      <XToggle
+        @onLabel='On'
+        @offLabel='Off'
+        @showLabels={{true}}
+        @theme='material'
+        @value={{model.leadIntegrityTest}}
+        @onToggle={{action (route-action "toggleLeadIntegrityTest")}}
+      />
+    </label>
+  </div>
 
 
 </Content>

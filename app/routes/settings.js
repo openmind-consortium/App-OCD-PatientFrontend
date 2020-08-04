@@ -17,6 +17,9 @@ export default Route.extend({
     },
     toggleProvocation() {
       this.settings.toggleProperty('showProvocation');
+    },
+    toggleLeadIntegrityTest() {
+      this.settings.toggleProperty('leadIntegrityTest');
     }
   }
 });
