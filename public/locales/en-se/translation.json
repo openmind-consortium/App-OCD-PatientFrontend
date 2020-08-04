@@ -29,7 +29,8 @@
       "beads": "Beads",
       "msit": "MSIT",
       "resting": "Resting State",
-      "provocation": "Provocation"
+      "provocation": "Provocation",
+      "cbt": "CBT"
     },
     "settings": {
       "dark-mode": "Dark mode",
