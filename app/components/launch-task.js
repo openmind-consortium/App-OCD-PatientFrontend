@@ -20,6 +20,9 @@ export default Component.extend({
             case 'provocation':
               taskPath = 'provocation\\provocation.exe'
               break;
+            case 'cbt':
+              taskPath = 'programming_cbt\\programming-cbt.exe'
+              break;
             default:
               console.log('Wrong task name selected.')
           }
