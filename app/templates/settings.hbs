@@ -1,6 +1,5 @@
 <Content @name={{t "menus.application.settings"}}>
   <hr>
-
   <div>
     <div class="info-locale align-self-start p-3">
       <p class="h4">{{t "content.settings.language"}}</p>
@@ -12,11 +11,11 @@
     <label class="p-4">
       <p class="h4">{{t "content.settings.set-theme"}}</p>
       <XToggle
-        @onLabel='Dark'
-        @offLabel='Light'
+        @onLabel={{t "content.settings.dark"}}
+        @offLabel={{t "content.settings.light"}}
         @showLabels={{true}}
         @theme='material'
-        @value={{model.isDark}}
+        @value={{settings.isDark}}
         @onToggle={{action (route-action "toggleMode")}}
       />
     </label>
@@ -25,11 +24,11 @@
     <label class="p-4">
       <p class="h4">{{t "content.settings.show-provocation"}}</p>
       <XToggle
-        @onLabel='Show'
-        @offLabel='Hide'
+        @onLabel={{t "content.settings.show"}}
+        @offLabel={{t "content.settings.hide"}}
         @showLabels={{true}}
         @theme='material'
-        @value={{model.showProvocation}}
+        @value={{settings.showProvocation}}
         @onToggle={{action (route-action "toggleProvocation")}}
       />
     </label>
@@ -38,17 +37,28 @@
     <label class="p-4">
       <p class="h4">{{t "content.settings.toggle-lead-integrity-test"}}</p>
       <XToggle
-        @onLabel='On'
-        @offLabel='Off'
+        @onLabel={{t "content.settings.on"}}
+        @offLabel={{t "content.settings.off"}}
         @showLabels={{true}}
         @theme='material'
-        @value={{model.leadIntegrityTest}}
+        @value={{settings.leadIntegrityTest}}
         @onToggle={{action (route-action "toggleLeadIntegrityTest")}}
       />
     </label>
   </div>
-
-
+  <div>
+    <label class="p-4">
+      <p class="h4">{{t "content.settings.toggle-beep"}}</p>
+      <XToggle
+        @onLabel={{t "content.settings.on"}}
+        @offLabel={{t "content.settings.off"}}
+        @showLabels={{true}}
+        @theme='material'
+        @value={{settings.beeps_on}}
+        @onToggle={{action (route-action "toggleBeeps")}}
+      />
+    </label>
+  </div>
 </Content>
 
 {{outlet}}

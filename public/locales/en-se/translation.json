@@ -38,7 +38,14 @@
       "language": "Change language",
       "set-user": "Set user name",
       "show-provocation": "Provocation Launcher",
-      "toggle-lead-integrity-test": "Lead integrity test"
+      "toggle-lead-integrity-test": "Lead integrity test",
+      "toggle-beep": "CTM beeps",
+      "on": "On",
+      "off": "Off",
+      "show": "Show",
+      "hide": "Hide",
+      "light": "Light",
+      "dark": "Dark"
     },
     "record": {
       "on-demand-recording": "On demand recording",

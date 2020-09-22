@@ -19,6 +19,7 @@ export default Route.extend(I18nMixin, {
       battery: 0,
       recording: false,
       stimulation_voltage: 0,
+      beeps_on: true,
       error: 'Connecting...'
     });
   },
@@ -29,7 +30,6 @@ export default Route.extend(I18nMixin, {
       const deviceStatus = this.zmq.request(statusMessage)
       deviceStatus
         .then((response) => {
-          console.log(response);
           if (response['payload']['success']) {
             device.set('error', '')
             device.set('stimulation_voltage', response['payload']['stim_on'])
@@ -38,6 +38,8 @@ export default Route.extend(I18nMixin, {
           } else {
             device.set('error', response['payload']['error_message'])
           }
+          // device.set('beeps_on', response['payload']['beeps_on'])
+          // this.settings.set('beeps_on', response['payload']['beeps_on'] )
         })
     }
     let device = model.store.peekRecord('device', 1)
