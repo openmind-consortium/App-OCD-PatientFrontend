@@ -25,8 +25,8 @@ export default Route.extend({
     },
     toggleBeeps() {
       console.log('beep toggled');
-      this.settings.toggleProperty('beeps_on');
-      let message = {message_type: 'post', message: 'beep_change', payload: {'beep_on': this.settings.get('beeps_on')}};
+      this.settings.toggleProperty('beep_disabled');
+      let message = {message_type: 'post', message: 'beep_change', payload: {'disable_beeps': this.settings.get('beep_disabled')}};
       this.zmq.request(message);
     }
   },
