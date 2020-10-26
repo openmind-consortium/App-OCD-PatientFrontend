@@ -23,13 +23,14 @@ export default Route.extend({
     toggleLeadIntegrityTest() {
       this.settings.toggleProperty('leadIntegrityTest');
     },
-    toggleBeeps() {
-      console.log('beep toggled');
-      this.settings.toggleProperty('beep_disabled');
-      console.log(this.settings.get('beep_disabled'))
-      let message = {message_type: 'post', message: 'beep_change', payload: {'disable_beeps': this.settings.get('beep_disabled')}};
+    toggleBeeps(device) {
+      this.settings.toggleProperty('beeps_disabled');
+      let message = {message_type: 'post', message: 'beep_change', payload: {'disable_beeps': this.settings.get('beeps_disabled')}};
       console.log(message)
-      this.zmq.request(message);
+      let togglePromise = this.zmq.request(message)
+      togglePromise.then(() => {
+        device.set('beeps_disabled', this.settings.get('beeps_disabled'))
+      })
     }
   },
 

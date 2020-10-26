@@ -19,7 +19,7 @@ export default Route.extend(I18nMixin, {
       battery: 0,
       recording: false,
       stimulation_voltage: 0,
-      beep_disabled: true,
+      beeps_disabled: true,
       error: 'Connecting...'
     });
   },
@@ -39,8 +39,8 @@ export default Route.extend(I18nMixin, {
           } else {
             device.set('error', response['payload']['error_message'])
           }
-          device.set('beep_disabled', response['payload']['beep_disabled'])
-          this.settings.set('beep_disabled', response['payload']['beep_disabled'])
+          device.set('beeps_disabled', response['payload']['beeps_disabled'])
+          this.settings.set('beeps_disabled', response['payload']['beeps_disabled'])
         })
     }
     let device = model.store.peekRecord('device', 1)

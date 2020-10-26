@@ -13,7 +13,6 @@ export default Service.extend({
       ipcRenderer.send('request', message_str)
       const respHandler = (event, args) => {
         const resp = JSON.parse(args)
-        console.log('zmq service')
         if (resp["message"] === message_type) {
           resolve(resp)
           ipcRenderer.removeListener('response', respHandler) // this self-referencing removal seems weird, but seems to work?

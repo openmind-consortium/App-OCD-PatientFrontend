@@ -54,8 +54,8 @@
         @offLabel={{t "content.settings.off"}}
         @showLabels={{true}}
         @theme='material'
-        @value={{settings.beep_disabled}}
-        @onToggle={{action (route-action "toggleBeeps")}}
+        @value={{settings.beeps_disabled}}
+        @onToggle={{action (route-action "toggleBeeps" model)}}
       />
     </label>
   </div>
