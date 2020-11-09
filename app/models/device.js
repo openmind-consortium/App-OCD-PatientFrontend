@@ -5,5 +5,6 @@ export default Model.extend({
   battery: DS.attr('number'),
   recording: DS.attr('boolean'),
   stimulation: DS.attr('boolean'),
+  beeps_disabled: DS.attr('boolean'),
   error: DS.attr('string'),
 });

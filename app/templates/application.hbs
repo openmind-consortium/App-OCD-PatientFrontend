@@ -12,6 +12,7 @@
         {{#unless model.error}}
           <Stimulus @voltage={{model.stimulation_voltage}}/>
           <Rec @recording={{model.recording}} @text="REC"/>
+          <Sound @beeps={{model.beeps_disabled}} />
           <Battery @value={{model.battery}} />
         {{/unless}}
         {{#if (eq model.error "Insufficient Battery")}}
