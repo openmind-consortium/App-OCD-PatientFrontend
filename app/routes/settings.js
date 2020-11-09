@@ -28,7 +28,8 @@ export default Route.extend({
       let message = {message_type: 'post', message: 'beep_change', payload: {'disable_beeps': this.settings.get('beeps_disabled')}};
       console.log(message)
       let togglePromise = this.zmq.request(message)
-      togglePromise.then(() => {
+      togglePromise.then((res) => {
+        console.log(res)
         device.set('beeps_disabled', this.settings.get('beeps_disabled'))
       })
     }

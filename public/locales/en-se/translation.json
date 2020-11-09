@@ -45,7 +45,9 @@
       "show": "Show",
       "hide": "Hide",
       "light": "Light",
-      "dark": "Dark"
+      "dark": "Dark",
+      "disabled": "Disabled",
+      "enabled": "Enabled"
     },
     "record": {
       "on-demand-recording": "On demand recording",
