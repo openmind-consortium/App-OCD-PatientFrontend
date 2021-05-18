@@ -13,20 +13,36 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+* [CMake](https://cmake.org)
 
 ## Installation
 
-* `git clone https://github.com/neuromotion/rcps-ember-electron.git` this repository
-* `cd rcps-ember-electron`
-* `npm install`
+### Clone this repository
 
-**NOTE**: Currently you need to comment out line 105 of `node_modules/electron-forge/dist/api/start.js` to get `electron ember` working as rebuilding fails.  There is a similar line in the `package.js` (198) file of the same path that also needs to be commented out.
+```
+git clone https://github.com/openmind-consortium/App-OCD-PatientFrontend.git
+``` 
 
-## Running / Development
+### Install Application Dependencies
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+```
+cd App-OCD-PatientFrontend
+npm install
+```
+### Install Additional Electron Dependencies
+
+```
+cd electron-app
+npm install
+```
+
+## Start the application
+
+```
+ember electron
+```
+
+## Development
 
 ### Code Generators
 
