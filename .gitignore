@@ -27,3 +27,5 @@
 electron-out/
 
 .npmrc
+package-lock.json
+electron-app/package-lock.json
