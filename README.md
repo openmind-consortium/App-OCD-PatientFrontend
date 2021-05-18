@@ -23,6 +23,13 @@ You will need the following things properly installed on your computer.
 git clone https://github.com/openmind-consortium/App-OCD-PatientFrontend.git
 ``` 
 
+### Add FontAwesome Registry and Pro TOKEN to npm config (ask CCV)
+
+```
+npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+npm config set "//npm.fontawesome.com/:_authToken" <TOKEN>
+```
+
 ### Install Application Dependencies
 
 ```
